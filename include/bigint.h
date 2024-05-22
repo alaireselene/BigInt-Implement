@@ -44,6 +44,9 @@ private:
     std::vector<int> add(const std::vector<int>& a, const std::vector<int>& b) const;
     std::vector<int> subtract(const std::vector<int>& a, const std::vector<int>& b) const;
     std::vector<int> trim(const std::vector<int>& digits) const;
+    std::vector<int> fillZeros(const std::vector<int>& digits, int numZeros) const;
+    std::vector<int> max(const std::vector<int>& a, const std::vector<int>& b) const;
+    std::vector<int> min(const std::vector<int>& a, const std::vector<int>& b) const;
 };
 
 #endif // BIGINT_H

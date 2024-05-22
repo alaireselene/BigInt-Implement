@@ -104,3 +104,56 @@ std::vector<int> BigInt::trim(const std::vector<int>& digits) const {
     }
     return result;
 }
+
+std::vector<int> BigInt::fillZeros(const std::vector<int>& digits, int numZeros) const {
+    std::vector<int> result = digits;
+    for (int i = 0; i < numZeros; ++i) {
+        result.push_back(0);
+    }
+    return result;
+}
+
+std::vector<int> BigInt::max(const std::vector<int>& a, const std::vector<int>& b) const {
+    if (a.size() > b.size()) {
+        return a;
+    } else if (a.size() < b.size()) {
+        return b;
+    } else {
+        for (int i = a.size() - 1; i >= 0; --i) {
+            if (a[i] > b[i]) {
+                return a;
+            } else if (a[i] < b[i]) {
+                return b;
+            }
+        }
+        return a; // a == b
+    }
+}
+
+std::vector<int> BigInt::min(const std::vector<int>& a, const std::vector<int>& b) const {
+    if (a.size() < b.size()) {
+        return a;
+    } else if (a.size() > b.size()) {
+        return b;
+    } else {
+        for (int i = a.size() - 1; i >= 0; --i) {
+            if (a[i] < b[i]) {
+                return a;
+            } else if (a[i] > b[i]) {
+                return b;
+            }
+        }
+        return a; // a == b
+    }
+}
+
+std::string BigInt::toString() const {
+    std::string result;
+    if (isNegative) {
+        result.push_back('-');
+    }
+    for (int i = digits.size() - 1; i >= 0; --i) {
+        result.push_back(digits[i] + '0');
+    }
+    return result;
+}
