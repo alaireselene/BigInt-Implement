@@ -29,5 +29,13 @@ target_link_libraries(test_bigInt BigInt GTest::gtest_main)
 # Link to BigInt library (if created)
 target_include_directories(test_bigInt PUBLIC include)
 
+# Add main executable and link to BigInt library
+add_executable(bigIntMain app/main.cpp)
+target_link_libraries(bigIntMain BigInt)
+target_include_directories(bigIntMain PUBLIC include)
+target_compile_features(bigIntMain PUBLIC cxx_std_17)
+
 include(GoogleTest)
 gtest_discover_tests(test_bigInt)
+
+

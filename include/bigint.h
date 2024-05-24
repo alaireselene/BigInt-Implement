@@ -8,7 +8,7 @@ class BigInt {
 public:
     // Constructors
     BigInt();                       // Default constructor (e.g., initializes to zero)
-    BigInt(int value);              // Construct from an integer
+    BigInt(long long int value);              // Construct from an integer
     BigInt(const std::string& str); // Construct from a string representation
 
     // Arithmetic Operators
@@ -39,14 +39,12 @@ private:
     // Data Members (e.g., to store the digits of the BigInt)
     std::vector<int> digits; // or std::vector<unsigned char> or other
     bool isNegative;
-
-    // Helper Functions (if needed)
-    std::vector<int> add(const std::vector<int>& a, const std::vector<int>& b) const;
-    std::vector<int> subtract(const std::vector<int>& a, const std::vector<int>& b) const;
-    std::vector<int> trim(const std::vector<int>& digits) const;
-    std::vector<int> fillZeros(const std::vector<int>& digits, int numZeros) const;
-    std::vector<int> max(const std::vector<int>& a, const std::vector<int>& b) const;
-    std::vector<int> min(const std::vector<int>& a, const std::vector<int>& b) const;
 };
 
+// Helper Functions
+std::vector<int> max(const std::vector<int>& a, const std::vector<int>& b);
+std::vector<int> min(const std::vector<int>& a, const std::vector<int>& b);
+std::vector<int> add(const std::vector<int>& a, const std::vector<int>& b);
+std::vector<int> subtract(const std::vector<int>& a, const std::vector<int>& b);
+std::vector<int> trim(const std::vector<int>& digits);
 #endif // BIGINT_H

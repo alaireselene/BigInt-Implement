@@ -1,19 +1,18 @@
 #include "bigint.h"
 #include <vector>
+#include <limits>
 
 BigInt::BigInt() : digits({0}), isNegative(false) {}
 
-BigInt::BigInt(int value) {
-    if (value < 0) {
-        isNegative = true;
-        value = -value;
-    } else {
-        isNegative = false;
-    }
-
+BigInt::BigInt(long long int value) {
+    isNegative = false;
     if (value == 0) {
         digits.push_back(0);
     } else {
+        if (value < 0) {
+            value = -value;
+            isNegative = true;
+        }
         while (value > 0) {
             digits.push_back(value % 10);
             value /= 10;
@@ -47,7 +46,7 @@ BigInt::BigInt(const std::string& str) {
     }
 }
 
-std::vector<int> BigInt::add(const std::vector<int>& a, const std::vector<int>& b) const {
+std::vector<int> add(const std::vector<int>& a, const std::vector<int>& b) {
     std::vector<int> result;
     int carry = 0;
     size_t i = 0;
@@ -69,7 +68,7 @@ std::vector<int> BigInt::add(const std::vector<int>& a, const std::vector<int>& 
     return result;
 }
 
-std::vector<int> BigInt::subtract(const std::vector<int>& a, const std::vector<int>& b) const {
+std::vector<int> subtract(const std::vector<int>& a, const std::vector<int>& b) {
     std::vector<int> result;
     int borrow = 0;
     size_t i = 0;
@@ -93,11 +92,12 @@ std::vector<int> BigInt::subtract(const std::vector<int>& a, const std::vector<i
         result.push_back(diff);
         ++i;
     }
+    result = trim(result);
 
     return result;
 }
 
-std::vector<int> BigInt::trim(const std::vector<int>& digits) const {
+std::vector<int> trim(const std::vector<int>& digits) {
     std::vector<int> result = digits;
     while (result.size() > 1 && result.back() == 0) {
         result.pop_back();
@@ -105,15 +105,7 @@ std::vector<int> BigInt::trim(const std::vector<int>& digits) const {
     return result;
 }
 
-std::vector<int> BigInt::fillZeros(const std::vector<int>& digits, int numZeros) const {
-    std::vector<int> result = digits;
-    for (int i = 0; i < numZeros; ++i) {
-        result.push_back(0);
-    }
-    return result;
-}
-
-std::vector<int> BigInt::max(const std::vector<int>& a, const std::vector<int>& b) const {
+std::vector<int> max(const std::vector<int>& a, const std::vector<int>& b) {
     if (a.size() > b.size()) {
         return a;
     } else if (a.size() < b.size()) {
@@ -130,7 +122,7 @@ std::vector<int> BigInt::max(const std::vector<int>& a, const std::vector<int>& 
     }
 }
 
-std::vector<int> BigInt::min(const std::vector<int>& a, const std::vector<int>& b) const {
+std::vector<int> min(const std::vector<int>& a, const std::vector<int>& b) {
     if (a.size() < b.size()) {
         return a;
     } else if (a.size() > b.size()) {
