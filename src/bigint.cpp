@@ -27,7 +27,7 @@ BigInt::BigInt(const std::string& str) {
         return;
     }
 
-    size_t start = 0;
+    int start = 0;
     if (str[0] == '-') {
         isNegative = true;
         start = 1;
@@ -35,7 +35,7 @@ BigInt::BigInt(const std::string& str) {
         isNegative = false;
     }
 
-    for (size_t i = str.size() - 1; i >= start; --i) {
+    for (int i = str.size() - 1; i >= start; --i) {
         if (str[i] < '0' || str[i] > '9') {
             digits.clear();
             digits.push_back(0);
@@ -49,7 +49,7 @@ BigInt::BigInt(const std::string& str) {
 std::vector<int> add(const std::vector<int>& a, const std::vector<int>& b) {
     std::vector<int> result;
     int carry = 0;
-    size_t i = 0;
+    int i = 0;
 
     while (i < a.size() || i < b.size() || carry > 0) {
         int sum = carry;
@@ -71,7 +71,7 @@ std::vector<int> add(const std::vector<int>& a, const std::vector<int>& b) {
 std::vector<int> subtract(const std::vector<int>& a, const std::vector<int>& b) {
     std::vector<int> result;
     int borrow = 0;
-    size_t i = 0;
+    int i = 0;
 
     while (i < a.size() || i < b.size()) {
         int diff = borrow;
