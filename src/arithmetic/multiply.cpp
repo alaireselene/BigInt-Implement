@@ -1,21 +1,28 @@
 #include "bigint.h"
 #include <vector>
+#include <iostream>
 
-BigInt BigInt::operator*(const BigInt& other) const {
+BigInt BigInt::operator*(const BigInt &other) const
+{
     BigInt result;
-    for (int i = 0; i < other.digits.size(); ++i) {
+    for (int i = 0; i < other.digits.size(); ++i)
+    {
         BigInt partial;
-        if (i > 1) {
-            partial.leftShift(i);
-        }
-        if (i == 0) {
+        if (i == 0)
+        {
             // Remove default '0' digit
             partial.rightShift(1);
         }
+        else
+        {
+            partial.leftShift(i - 1);
+        }
         int carry = 0;
-        for (int j = 0; j < digits.size() || carry > 0; ++j) {
+        for (int j = 0; j < digits.size() || carry > 0; ++j)
+        {
             long long int product = carry;
-            if (j < digits.size()) {
+            if (j < digits.size())
+            {
                 product += digits[j] * other.digits[i];
             }
             partial.digits.push_back(product % 10);
