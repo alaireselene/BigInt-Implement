@@ -13,6 +13,6 @@ BigInt BigInt::operator+(const BigInt& other) const {
         } else {
             result.isNegative = other.isNegative;
         }
-    return result;
     }
+    return result;
 }

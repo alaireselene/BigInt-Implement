@@ -32,19 +32,21 @@ public:
 
     // Utility Functions
     std::string toString() const;
+    void leftShift(int n);
+    void rightShift(int n);
+    void zeroTrim();
     friend std::ostream& operator<<(std::ostream& os, const BigInt& bigInt);
     friend std::istream& operator>>(std::istream& is, BigInt& bigInt);
 
 private:
     // Data Members (e.g., to store the digits of the BigInt)
-    std::vector<int> digits; // or std::vector<unsigned char> or other
+    std::vector<long long int> digits; 
     bool isNegative;
 };
 
 // Helper Functions
-std::vector<int> max(const std::vector<int>& a, const std::vector<int>& b);
-std::vector<int> min(const std::vector<int>& a, const std::vector<int>& b);
-std::vector<int> add(const std::vector<int>& a, const std::vector<int>& b);
-std::vector<int> subtract(const std::vector<int>& a, const std::vector<int>& b);
-std::vector<int> trim(const std::vector<int>& digits);
+std::vector<long long int> max(const std::vector<long long int>& a, const std::vector<long long int>& b);
+std::vector<long long int> min(const std::vector<long long int>& a, const std::vector<long long int>& b);
+std::vector<long long int> add(const std::vector<long long int>& a, const std::vector<long long int>& b);
+std::vector<long long int> subtract(const std::vector<long long int>& a, const std::vector<long long int>& b);
 #endif // BIGINT_H

@@ -26,28 +26,29 @@ BigInt::BigInt(const std::string& str) {
         isNegative = false;
         return;
     }
-
-    int start = 0;
-    if (str[0] == '-') {
-        isNegative = true;
-        start = 1;
-    } else {
-        isNegative = false;
-    }
-
-    for (int i = str.size() - 1; i >= start; --i) {
-        if (str[i] < '0' || str[i] > '9') {
-            digits.clear();
-            digits.push_back(0);
+    else {
+        int start = 0;
+        if (str[0] == '-') {
+            isNegative = true;
+            start = 1;
+        } else {
             isNegative = false;
-            return;
         }
-        digits.push_back(str[i] - '0');
+
+        for (int i = str.length() - 1; i >= start; --i) {
+            if (str[i] < '0' || str[i] > '9') {
+                digits.clear();
+                digits.push_back(0);
+                isNegative = false;
+                return;
+            }
+            digits.push_back(str[i] - '0');
+        }
     }
 }
 
-std::vector<int> add(const std::vector<int>& a, const std::vector<int>& b) {
-    std::vector<int> result;
+std::vector<long long int> add(const std::vector<long long int>& a, const std::vector<long long int>& b) {
+    std::vector<long long int> result;
     int carry = 0;
     int i = 0;
 
@@ -68,8 +69,8 @@ std::vector<int> add(const std::vector<int>& a, const std::vector<int>& b) {
     return result;
 }
 
-std::vector<int> subtract(const std::vector<int>& a, const std::vector<int>& b) {
-    std::vector<int> result;
+std::vector<long long int> subtract(const std::vector<long long int>& a, const std::vector<long long int>& b) {
+    std::vector<long long int> result;
     int borrow = 0;
     int i = 0;
 
@@ -92,20 +93,10 @@ std::vector<int> subtract(const std::vector<int>& a, const std::vector<int>& b) 
         result.push_back(diff);
         ++i;
     }
-    result = trim(result);
-
     return result;
 }
 
-std::vector<int> trim(const std::vector<int>& digits) {
-    std::vector<int> result = digits;
-    while (result.size() > 1 && result.back() == 0) {
-        result.pop_back();
-    }
-    return result;
-}
-
-std::vector<int> max(const std::vector<int>& a, const std::vector<int>& b) {
+std::vector<long long int> max(const std::vector<long long int>& a, const std::vector<long long int>& b) {
     if (a.size() > b.size()) {
         return a;
     } else if (a.size() < b.size()) {
@@ -122,7 +113,7 @@ std::vector<int> max(const std::vector<int>& a, const std::vector<int>& b) {
     }
 }
 
-std::vector<int> min(const std::vector<int>& a, const std::vector<int>& b) {
+std::vector<long long int> min(const std::vector<long long int>& a, const std::vector<long long int>& b) {
     if (a.size() < b.size()) {
         return a;
     } else if (a.size() > b.size()) {
@@ -148,4 +139,22 @@ std::string BigInt::toString() const {
         result.push_back(digits[i] + '0');
     }
     return result;
+}
+
+void BigInt::leftShift(int n) {
+    for (int i = 0; i < n; ++i) {
+        digits.push_back(0);
+    }
+}
+
+void BigInt::rightShift(int n) {
+    for (int i = 0; i < n; ++i) {
+        digits.pop_back();
+    }
+}
+
+void BigInt::zeroTrim() {
+    while (digits.size() > 1 && digits.back() == 0) {
+        digits.pop_back();
+    }
 }
