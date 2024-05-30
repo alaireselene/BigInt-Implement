@@ -4,39 +4,53 @@
 
 BigInt::BigInt() : digits({0}), isNegative(false) {}
 
-BigInt::BigInt(long long int value) {
+BigInt::BigInt(long long int value)
+{
     isNegative = false;
-    if (value == 0) {
+    if (value == 0)
+    {
         digits.push_back(0);
-    } else {
-        if (value < 0) {
+    }
+    else
+    {
+        if (value < 0)
+        {
             value = -value;
             isNegative = true;
         }
-        while (value > 0) {
+        while (value > 0)
+        {
             digits.push_back(value % 10);
             value /= 10;
         }
     }
 }
 
-BigInt::BigInt(const std::string& str) {
-    if (str.empty()) {
+BigInt::BigInt(const std::string &str)
+{
+    if (str.empty())
+    {
         digits.push_back(0);
         isNegative = false;
         return;
     }
-    else {
+    else
+    {
         int start = 0;
-        if (str[0] == '-') {
+        if (str[0] == '-')
+        {
             isNegative = true;
             start = 1;
-        } else {
+        }
+        else
+        {
             isNegative = false;
         }
 
-        for (int i = str.length() - 1; i >= start; --i) {
-            if (str[i] < '0' || str[i] > '9') {
+        for (int i = str.length() - 1; i >= start; --i)
+        {
+            if (str[i] < '0' || str[i] > '9')
+            {
                 digits.clear();
                 digits.push_back(0);
                 isNegative = false;
@@ -47,17 +61,21 @@ BigInt::BigInt(const std::string& str) {
     }
 }
 
-std::vector<long long int> add(const std::vector<long long int>& a, const std::vector<long long int>& b) {
+std::vector<long long int> add(const std::vector<long long int> &a, const std::vector<long long int> &b)
+{
     std::vector<long long int> result;
     int carry = 0;
     int i = 0;
 
-    while (i < a.size() || i < b.size() || carry > 0) {
+    while (i < a.size() || i < b.size() || carry > 0)
+    {
         int sum = carry;
-        if (i < a.size()) {
+        if (i < a.size())
+        {
             sum += a[i];
         }
-        if (i < b.size()) {
+        if (i < b.size())
+        {
             sum += b[i];
         }
 
@@ -69,24 +87,31 @@ std::vector<long long int> add(const std::vector<long long int>& a, const std::v
     return result;
 }
 
-std::vector<long long int> subtract(const std::vector<long long int>& a, const std::vector<long long int>& b) {
+std::vector<long long int> subtract(const std::vector<long long int> &a, const std::vector<long long int> &b)
+{
     std::vector<long long int> result;
     int borrow = 0;
     int i = 0;
 
-    while (i < a.size() || i < b.size()) {
+    while (i < a.size() || i < b.size())
+    {
         int diff = borrow;
-        if (i < a.size()) {
+        if (i < a.size())
+        {
             diff += a[i];
         }
-        if (i < b.size()) {
+        if (i < b.size())
+        {
             diff -= b[i];
         }
 
-        if (diff < 0) {
+        if (diff < 0)
+        {
             diff += 10;
             borrow = -1;
-        } else {
+        }
+        else
+        {
             borrow = 0;
         }
 
@@ -96,65 +121,110 @@ std::vector<long long int> subtract(const std::vector<long long int>& a, const s
     return result;
 }
 
-std::vector<long long int> max(const std::vector<long long int>& a, const std::vector<long long int>& b) {
-    if (a.size() > b.size()) {
-        return a;
-    } else if (a.size() < b.size()) {
-        return b;
-    } else {
-        for (int i = a.size() - 1; i >= 0; --i) {
-            if (a[i] > b[i]) {
-                return a;
-            } else if (a[i] < b[i]) {
-                return b;
+bool greater(const std::vector<long long int> &a, const std::vector<long long int> &b)
+{
+    if (a.size() > b.size())
+    {
+        return true;
+    }
+    else if (a.size() < b.size())
+    {
+        return false;
+    }
+    else
+    {
+        bool isNotEqual = false;
+        for (int i = a.size() - 1; i >= 0; --i)
+        {
+            if (a[i] < b[i])
+            {
+                return false;
+            }
+            else if (a[i] > b[i])
+            {
+                isNotEqual = true;
             }
         }
-        return a; // a == b
+        return isNotEqual;
     }
 }
 
-std::vector<long long int> min(const std::vector<long long int>& a, const std::vector<long long int>& b) {
-    if (a.size() < b.size()) {
-        return a;
-    } else if (a.size() > b.size()) {
-        return b;
-    } else {
-        for (int i = a.size() - 1; i >= 0; --i) {
-            if (a[i] < b[i]) {
-                return a;
-            } else if (a[i] > b[i]) {
-                return b;
-            }
+bool equal(const std::vector<long long int> &a, const std::vector<long long int> &b)
+{
+    if (a.size() != b.size())
+    {
+        return false;
+    }
+    for (int i = 0; i < a.size(); ++i)
+    {
+        if (a[i] != b[i])
+        {
+            return false;
         }
-        return a; // a == b
+    }
+    return true;
+}
+
+std::vector<long long int> max(const std::vector<long long int> &a, const std::vector<long long int> &b)
+{
+    // if (a > b)
+    if (greater(a, b))
+    {
+        return a;
+    }
+    else
+    {
+        return b;
     }
 }
 
-std::string BigInt::toString() const {
+std::vector<long long int> min(const std::vector<long long int> &a, const std::vector<long long int> &b)
+{
+    // if (a < b)
+    if (greater(a, b))
+    {
+        return b;
+    }
+    else
+    {
+        return a;
+    }
+}
+
+std::string BigInt::toString() const
+{
     std::string result;
-    if (isNegative) {
+    if (isNegative)
+    {
         result.push_back('-');
     }
-    for (int i = digits.size() - 1; i >= 0; --i) {
+    for (int i = digits.size() - 1; i >= 0; --i)
+    {
         result.push_back(digits[i] + '0');
     }
     return result;
 }
 
-void BigInt::leftShift(int n) {
-    for (int i = 0; i < n; ++i) {
+void BigInt::leftShift(int n)
+{
+    for (int i = 0; i < n; ++i)
+    {
         digits.push_back(0);
     }
 }
 
-void BigInt::rightShift(int n) {
-    for (int i = 0; i < n; ++i) {
+void BigInt::rightShift(int n)
+{
+    for (int i = 0; i < n; ++i)
+    {
         digits.pop_back();
     }
 }
 
-void BigInt::zeroTrim() {
-    while (digits.size() > 1 && digits.back() == 0) {
+void BigInt::zeroTrim()
+{
+    while (digits.size() > 1 && digits.back() == 0)
+    {
         digits.pop_back();
     }
 }
