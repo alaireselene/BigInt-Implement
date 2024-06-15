@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 project(BigIntImplement VERSION 1.0.0 LANGUAGES CXX)
+# SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -xc++ -Wall -Wunused-variable -Wshadow")
 
 include(CTest)
 enable_testing()
@@ -39,5 +40,7 @@ target_compile_features(bigIntMain PUBLIC cxx_std_17)
 
 include(GoogleTest)
 gtest_discover_tests(test_bigInt)
+
+
 
 
