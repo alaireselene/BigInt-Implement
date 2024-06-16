@@ -1,4 +1,6 @@
 #include "bigint.hpp"
+#include <stdexcept>
+#include <string>
 
 // Default constructor
 BigInt::BigInt() : digits({0}), isNegative(false) {}
@@ -31,15 +33,17 @@ BigInt::BigInt(const std::deque<digit> &digits, bool isNegative)
   if (digits.size() == 0) {
     this->digits.push_front(digit(0));
     this->isNegative = false;
+  } else {
+    while (this->digits.size() > 1 && this->digits.front() == 0) {
+      this->digits.pop_front();
+    }
   }
 }
 
 // String to BigInt
 BigInt::BigInt(const std::string &str) {
   if (str.empty()) {
-    digits.push_front(digit(0));
-    isNegative = false;
-    return;
+    throw std::invalid_argument("Your input is empty. Please enter a number.");
   } else {
     int start = 0;
     if (str[0] == '-') {
@@ -51,12 +55,15 @@ BigInt::BigInt(const std::string &str) {
 
     for (int i = start; i < str.length(); ++i) {
       if (str[i] < '0' || str[i] > '9') {
-        digits.clear();
-        digits.push_back(digit(0));
-        isNegative = false;
-        return;
+        std::string error = "Your input contains non-digit characters " +
+                            std::to_string(str[i]) + " with ASCII value " +
+                            std::to_string(str[i]) +
+                            ". Please enter a valid number.";
+        throw std::invalid_argument(error);
       }
-      digits.push_back(digit(str[i] - '0'));
+      if (i != start || str[i] != '0') {
+        digits.push_back(digit(str[i] - '0'));
+      }
     }
   }
 }

@@ -1,5 +1,7 @@
 #include "bigint.hpp"
+#include <chrono>
 #include <cmath>
+#include <random>
 
 std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b) {
   std::deque<digit> result;
@@ -95,6 +97,12 @@ divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b) {
     quotient = std::deque<digit>{0};
     remainder = std::deque<digit>{0};
   }
+  // If b = 1 then remainder = 0 and quotient = a
+  else if (b_size == 1 && b.back() == 1) {
+    quotient = a;
+    remainder = std::deque<digit>{0};
+  }
+
   // If a = b then remainder = 0 and quotient = 1
   else if (equal(a, b)) {
     quotient = std::deque<digit>{1};
@@ -161,4 +169,17 @@ bool equal(const std::deque<digit> &a, const std::deque<digit> &b) {
     }
   }
   return true;
+}
+
+BigInt randomBigInt(const int &size) {
+  std::mt19937 gen(std::chrono::steady_clock::now().time_since_epoch().count());
+  std::uniform_int_distribution<int> dis(0, 9);
+  std::uniform_int_distribution<int> sign(0, 1);
+  std::deque<char> digits;
+  bool isNegative = bool(sign(gen));
+  for (int i = 0; i < size; ++i) {
+    digits.push_back(dis(gen));
+  }
+
+  return BigInt(digits, isNegative);
 }

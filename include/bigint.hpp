@@ -94,6 +94,7 @@ public:
   long toLong() const;
   long long toLongLong() const;
   void toFile(const std::string &filename) const;
+  BigInt fromFile(const std::string &filename);
 
   // Utility Functions
   friend std::ostream &operator<<(std::ostream &os, const BigInt &bigInt);
@@ -107,8 +108,6 @@ private:
 };
 
 // Utility Functions
-std::deque<digit> max(const std::deque<digit> &a, const std::deque<digit> &b);
-std::deque<digit> min(const std::deque<digit> &a, const std::deque<digit> &b);
 std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b);
 std::deque<digit> subtract(const std::deque<digit> &a,
                            const std::deque<digit> &b);
@@ -118,4 +117,5 @@ std::pair<std::deque<digit>, std::deque<digit>>
 divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b);
 bool greater(const std::deque<digit> &a, const std::deque<digit> &b);
 bool equal(const std::deque<digit> &a, const std::deque<digit> &b);
+BigInt randomBigInt(const int &size);
 #endif

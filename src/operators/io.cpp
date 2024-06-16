@@ -6,3 +6,8 @@ std::istream &operator>>(std::istream &is, BigInt &bigInt) {
   bigInt = BigInt(input);
   return is;
 }
+
+std::ostream &operator<<(std::ostream &os, const BigInt &bigInt) {
+  os << bigInt.toString();
+  return os;
+}
