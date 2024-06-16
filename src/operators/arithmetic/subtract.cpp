@@ -15,8 +15,5 @@ BigInt BigInt::operator-(const BigInt &other) const {
       result.isNegative = !(other.isNegative);
     }
   }
-  while (result.digits.size() > 1 && result.digits.back() == 0) {
-    result.digits.pop_back();
-  }
   return result;
 }

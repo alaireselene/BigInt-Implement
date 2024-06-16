@@ -6,34 +6,20 @@ std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b) {
   std::deque<digit> result;
   int a_size = a.size();
   int b_size = b.size();
-  int max_size = std::max(a_size, b_size);
   int carry = 0;
-  int i = max_size - 1;
+  int i = 0;
 
-  if (a_size == max_size) {
-    while (i >= 0) {
-      int sum = carry;
-      if (i >= b_size) {
-        sum += a.at(i);
-      } else {
-        sum += a.at(i) + b.at(i);
-      }
-      result.push_front(sum % 10);
-      carry = sum / 10;
-      --i;
+  while (i < a_size || i < b_size || carry > 0) {
+    int sum = carry;
+    if (i < a_size) {
+      sum += a.at(a_size - 1 - i);
     }
-  } else {
-    while (i >= 0) {
-      int sum = carry;
-      if (i >= a_size) {
-        sum += b.at(i);
-      } else {
-        sum += b.at(i) + a.at(i);
-      }
-      result.push_front(sum % 10);
-      carry = sum / 10;
-      --i;
+    if (i < b_size) {
+      sum += b.at(b_size - 1 - i);
     }
+    result.push_front(sum % 10);
+    carry = sum / 10;
+    ++i;
   }
 
   return result;
@@ -44,44 +30,24 @@ std::deque<digit> subtract(const std::deque<digit> &a,
   std::deque<digit> result;
   int a_size = a.size();
   int b_size = b.size();
-  int max_size = std::max(a_size, b_size);
   int borrow = 0;
-  int i = max_size - 1;
-
-  if (a_size == max_size) {
-    while (i >= 0) {
-      int diff = borrow;
-      if (i >= b_size) {
-        diff += a.at(i);
-      } else {
-        diff += a.at(i) - b.at(i);
-      }
-      if (diff < 0) {
-        diff += 10;
-        borrow = -1;
-      } else {
-        borrow = 0;
-      }
-      result.push_front(diff);
-      --i;
+  int i = 0;
+  while (i < a_size || i < b_size) {
+    int diff = borrow;
+    if (i < a_size) {
+      diff += a.at(a_size - i - 1);
     }
-  } else {
-    while (i >= 0) {
-      int diff = borrow;
-      if (i >= a_size) {
-        diff -= b.at(i);
-      } else {
-        diff += a.at(i) - b.at(i);
-      }
-      if (diff < 0) {
-        diff += 10;
-        borrow = -1;
-      } else {
-        borrow = 0;
-      }
-      result.push_front(diff);
-      --i;
+    if (i < b_size) {
+      diff -= b.at(b_size - i - 1);
     }
+    if (diff < 0) {
+      diff += 10;
+      borrow = -1;
+    } else {
+      borrow = 0;
+    }
+    result.push_front(diff);
+    ++i;
   }
   return result;
 }
