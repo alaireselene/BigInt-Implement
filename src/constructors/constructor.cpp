@@ -12,24 +12,24 @@ BigInt::BigInt(const BigInt &num) {
 BigInt::BigInt(long long int value) {
   isNegative = false;
   if (value == 0) {
-    digits.push_back(0);
+    digits.push_front(digit(0));
   } else {
     if (value < 0) {
       value = -value;
       isNegative = true;
     }
     while (value > 0) {
-      digits.push_back(value % 10);
+      digits.push_front(digit(value % 10));
       value /= 10;
     }
   }
 }
 
-// Vector of digits and sign to BigInt
-BigInt::BigInt(const std::vector<long long> &digits, bool isNegative)
+// deque of digits and sign to BigInt
+BigInt::BigInt(const std::deque<digit> &digits, bool isNegative)
     : digits(digits), isNegative(isNegative) {
   if (digits.size() == 0) {
-    this->digits.push_back(0);
+    this->digits.push_front(digit(0));
     this->isNegative = false;
   }
 }
@@ -37,7 +37,7 @@ BigInt::BigInt(const std::vector<long long> &digits, bool isNegative)
 // String to BigInt
 BigInt::BigInt(const std::string &str) {
   if (str.empty()) {
-    digits.push_back(0);
+    digits.push_front(digit(0));
     isNegative = false;
     return;
   } else {
@@ -49,14 +49,14 @@ BigInt::BigInt(const std::string &str) {
       isNegative = false;
     }
 
-    for (int i = str.length() - 1; i >= start; --i) {
+    for (int i = start; i < str.length(); ++i) {
       if (str[i] < '0' || str[i] > '9') {
         digits.clear();
-        digits.push_back(0);
+        digits.push_back(digit(0));
         isNegative = false;
         return;
       }
-      digits.push_back(str[i] - '0');
+      digits.push_back(digit(str[i] - '0'));
     }
   }
 }

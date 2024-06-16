@@ -7,8 +7,8 @@ std::string BigInt::toString() const {
   if (isNegative) {
     result.push_back('-');
   }
-  for (int i = digits.size() - 1; i >= 0; --i) {
-    result.push_back(digits[i] + '0');
+  for (digit d : digits) {
+    result.push_back(d + '0');
   }
   return result;
 }
@@ -16,8 +16,8 @@ std::string BigInt::toString() const {
 // Convert a BigInt to an integer
 int BigInt::toInt() const {
   int result = 0;
-  for (int i = digits.size() - 1; i >= 0; --i) {
-    result = result * 10 + digits[i];
+  for (int i = 0; i < digits.size(); --i) {
+    result = result * 10 + digits.at(i);
   }
   return isNegative ? -result : result;
 }
@@ -25,8 +25,8 @@ int BigInt::toInt() const {
 // Convert a BigInt to a long
 long BigInt::toLong() const {
   long result = 0;
-  for (int i = digits.size() - 1; i >= 0; --i) {
-    result = result * 10 + digits[i];
+  for (int i = 0; i < digits.size(); --i) {
+    result = result * 10 + digits.at(i);
   }
   return isNegative ? -result : result;
 }
@@ -34,8 +34,8 @@ long BigInt::toLong() const {
 // Convert a BigInt to a long long
 long long BigInt::toLongLong() const {
   long long result = 0;
-  for (int i = digits.size() - 1; i >= 0; --i) {
-    result = result * 10 + digits[i];
+  for (int i = 0; i < digits.size(); --i) {
+    result = result * 10 + digits.at(i);
   }
   return isNegative ? -result : result;
 }
