@@ -1,6 +1,5 @@
 #include "bigint.hpp"
 #include <cmath>
-#include <deque>
 
 std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b) {
   std::deque<digit> result;
@@ -49,6 +48,9 @@ std::deque<digit> subtract(const std::deque<digit> &a,
     result.push_front(diff);
     ++i;
   }
+  while (result.size() > 1 && result.front() == 0) {
+    result.pop_front();
+  }
   return result;
 }
 
@@ -59,10 +61,12 @@ std::deque<digit> multiply(const std::deque<digit> &a,
   int b_size = b.size();
   for (int i = a_size - 1; i >= 0; --i) {
     std::deque<digit> partial;
-    partial.insert(partial.end(), i, 0);
+    partial.insert(partial.begin(), a_size - 1 - i, 0);
     int carry = 0;
-    for (int j = b_size; j >= 0; --j) {
-      int product = a.at(j) * b.at(i) + carry;
+    for (int j = b_size - 1; j >= 0 || carry > 0; --j) {
+      int product = carry;
+      if (j >= 0)
+        product += a.at(i) * b.at(j);
       partial.push_front(product % 10);
       carry = product / 10;
     }
@@ -111,8 +115,8 @@ divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b) {
         // If temp is greater than b but with same size, guess x in [1,
         // temp.back() / b.back()] . Otherwise, guess x in [1, 9]
         digit x =
-            remainder.size() == b.size() ? remainder.back() / b.back() : 9;
-        while (greater(remainder, multiply(b, std::deque<digit>{x}))) {
+            remainder.size() == b.size() ? remainder.front() / b.front() : 9;
+        while (greater(multiply(b, std::deque<digit>{x}), remainder)) {
           --x;
         }
         quotient.push_back(x);
@@ -137,7 +141,7 @@ bool greater(const std::deque<digit> &a, const std::deque<digit> &b) {
     return false;
   } else {
     bool isGreater = true;
-    for (int i = 0; i < a_size; --i) {
+    for (int i = 0; i < a_size; ++i) {
       if (a.at(i) != b.at(i)) {
         isGreater = a.at(i) > b.at(i);
         break;

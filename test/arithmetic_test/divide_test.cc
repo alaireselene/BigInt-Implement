@@ -35,13 +35,13 @@ TEST(Divide, Greater) {
 TEST(Divide, Less) {
   BigInt a(987654321);
   BigInt b(123456789);
-  EXPECT_EQ(a / b, BigInt(8));
+  EXPECT_EQ((a / b).toString(), "8");
 }
 
 TEST(Divide, Negative) {
   BigInt a(-987654321);
   BigInt b(123456789);
-  EXPECT_EQ(a / b, BigInt(-8));
+  EXPECT_EQ((a / b).toString(), "-8");
 }
 
 TEST(Divide, NegativeRemainder) {
@@ -54,5 +54,5 @@ TEST(Divide, Extra) {
   BigInt a(14192);
   BigInt b(25);
   BigInt c = a / b;
-  EXPECT_EQ(c, BigInt(int(14192 / 25)));
+  EXPECT_EQ(c.toInt(), int(14192 / 25));
 }
