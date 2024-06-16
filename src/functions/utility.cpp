@@ -100,7 +100,7 @@ divideWithRemainder(const std::vector<long long> &a,
     remainder = std::vector<long long>{0};
   }
   // If a < b then remainder = a and quotient = 0
-  else if (greater(a, b)) {
+  else if (greater(b, a)) {
     quotient = std::vector<long long>{0};
   } else {
     // TODO: Implement division algorithm
@@ -140,15 +140,14 @@ bool greater(const std::vector<long long> &a, const std::vector<long long> &b) {
   } else if (a.size() < b.size()) {
     return false;
   } else {
-    bool isNotEqual = false;
+    bool isGreater = true;
     for (int i = a.size() - 1; i >= 0; --i) {
-      if (a[i] < b[i]) {
-        return false;
-      } else if (a[i] > b[i]) {
-        isNotEqual = true;
+      if (a[i] != b[i]) {
+        isGreater = a[i] > b[i];
+        break;
       }
     }
-    return isNotEqual;
+    return isGreater;
   }
 }
 

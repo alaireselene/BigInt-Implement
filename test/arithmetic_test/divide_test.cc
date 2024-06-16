@@ -53,5 +53,6 @@ TEST(Divide, NegativeRemainder) {
 TEST(Divide, Extra) {
   BigInt a(14192);
   BigInt b(25);
-  EXPECT_EQ(a / b, BigInt(int(14192 / 25)));
+  BigInt c = a / b;
+  EXPECT_EQ(c, BigInt(int(14192 / 25)));
 }
