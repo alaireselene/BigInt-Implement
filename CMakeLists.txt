@@ -30,17 +30,11 @@ target_compile_features(test_bigInt PUBLIC cxx_std_17)
 target_link_libraries(test_bigInt BigInt GTest::gtest_main)  
 target_include_directories(test_bigInt PUBLIC include)
 
-# Build stdio executable - test the library with stdio
-add_executable(stdio_bigInt app/stdio_bigInt.cpp)
-target_link_libraries(stdio_bigInt BigInt)
-target_include_directories(stdio_bigInt PUBLIC include)
-target_compile_features(stdio_bigInt PUBLIC cxx_std_17)
-
-# Build fileio executable - test the library with file input/output
-add_executable(fileio_bigInt app/fileio_bigInt.cpp)
-target_link_libraries(fileio_bigInt BigInt)
-target_include_directories(fileio_bigInt PUBLIC include)
-target_compile_features(fileio_bigInt PUBLIC cxx_std_17)
+# Build stdio executable - test the library
+add_executable(app_bigInt app/app_bigint.cpp)
+target_link_libraries(app_bigInt BigInt)
+target_include_directories(app_bigInt PUBLIC include)
+target_compile_features(app_bigInt PUBLIC cxx_std_17)
 
 include(GoogleTest)
 gtest_discover_tests(test_bigInt)

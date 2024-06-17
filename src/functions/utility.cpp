@@ -44,6 +44,17 @@ std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b,
 std::deque<digit> multiply(const std::deque<digit> &a,
                            const std::deque<digit> &b) {
   std::deque<digit> result;
+  // If a or b is 0, return 0
+  if ((a.size() == 1 && a.front() == 0) || (b.size() == 1 && b.front() == 0)) {
+    return std::deque<digit>{0};
+  }
+  // If a or b is 1, return the other number
+  if (a.size() == 1 && a.front() == 1) {
+    return b;
+  }
+  if (b.size() == 1 && b.front() == 1) {
+    return a;
+  }
   int aSize = a.size();
   int bSize = b.size();
   for (int i = aSize - 1; i >= 0; --i) {
@@ -161,6 +172,9 @@ bool equal(const std::deque<digit> &a, const std::deque<digit> &b) {
 
 // Generate a random BigInt with a given size
 BigInt randomize(const int &size) {
+  if (size <= 0) {
+    throw std::invalid_argument("Size must be greater than 0.");
+  }
   std::mt19937 gen(std::chrono::steady_clock::now().time_since_epoch().count());
   std::uniform_int_distribution<int> dis(0, 9);
   std::uniform_int_distribution<int> sign(0, 1);
