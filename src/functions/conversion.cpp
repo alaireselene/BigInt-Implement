@@ -16,8 +16,8 @@ std::string BigInt::toString() const {
 // overflow exception
 int BigInt::toInt() const {
   int result = 0;
-  int digits_size = digits.size();
-  for (int i = 0; i < digits_size; ++i) {
+  int digitsSize = digits.size();
+  for (int i = 0; i < digitsSize; ++i) {
     if (result > (INT_MAX - digits.at(i)) / 10) {
       throw std::overflow_error("BigInt is too large to convert to int");
     } else
@@ -30,8 +30,8 @@ int BigInt::toInt() const {
 // exception
 long BigInt::toLong() const {
   long result = 0;
-  int digits_size = digits.size();
-  for (auto i = 0; i < digits_size; ++i) {
+  int digitsSize = digits.size();
+  for (auto i = 0; i < digitsSize; ++i) {
     if (result > (LONG_MAX - digits.at(i)) / 10) {
       throw std::overflow_error("BigInt is too large to convert to long");
     } else
@@ -44,8 +44,8 @@ long BigInt::toLong() const {
 // overflow exception
 long long BigInt::toLongLong() const {
   long long result = 0;
-  int digits_size = digits.size();
-  for (auto i = 0; i < digits_size; ++i) {
+  int digitsSize = digits.size();
+  for (auto i = 0; i < digitsSize; ++i) {
     if (result > (LLONG_MAX - digits.at(i)) / 10) {
       throw std::overflow_error("BigInt is too large to convert to long long");
     } else

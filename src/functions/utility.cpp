@@ -6,18 +6,18 @@
 // Add two deques of digits
 std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b) {
   std::deque<digit> result;
-  int a_size = a.size();
-  int b_size = b.size();
+  int aSize = a.size();
+  int bSize = b.size();
   int carry = 0;
   int i = 0;
 
-  while (i < a_size || i < b_size || carry > 0) {
+  while (i < aSize || i < bSize || carry > 0) {
     int sum = carry;
-    if (i < a_size) {
-      sum += a.at(a_size - 1 - i);
+    if (i < aSize) {
+      sum += a.at(aSize - 1 - i);
     }
-    if (i < b_size) {
-      sum += b.at(b_size - 1 - i);
+    if (i < bSize) {
+      sum += b.at(bSize - 1 - i);
     }
     result.push_front(sum % 10);
     carry = sum / 10;
@@ -30,17 +30,17 @@ std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b) {
 std::deque<digit> subtract(const std::deque<digit> &a,
                            const std::deque<digit> &b) {
   std::deque<digit> result;
-  int a_size = a.size();
-  int b_size = b.size();
+  int aSize = a.size();
+  int bSize = b.size();
   int borrow = 0;
   int i = 0;
-  while (i < a_size || i < b_size) {
+  while (i < aSize || i < bSize) {
     int diff = borrow;
-    if (i < a_size) {
-      diff += a.at(a_size - i - 1);
+    if (i < aSize) {
+      diff += a.at(aSize - i - 1);
     }
-    if (i < b_size) {
-      diff -= b.at(b_size - i - 1);
+    if (i < bSize) {
+      diff -= b.at(bSize - i - 1);
     }
     if (diff < 0) {
       diff += 10;
@@ -61,13 +61,13 @@ std::deque<digit> subtract(const std::deque<digit> &a,
 std::deque<digit> multiply(const std::deque<digit> &a,
                            const std::deque<digit> &b) {
   std::deque<digit> result;
-  int a_size = a.size();
-  int b_size = b.size();
-  for (int i = a_size - 1; i >= 0; --i) {
+  int aSize = a.size();
+  int bSize = b.size();
+  for (int i = aSize - 1; i >= 0; --i) {
     std::deque<digit> partial;
-    partial.insert(partial.begin(), a_size - 1 - i, 0);
+    partial.insert(partial.begin(), aSize - 1 - i, 0);
     int carry = 0;
-    for (int j = b_size - 1; j >= 0 || carry > 0; --j) {
+    for (int j = bSize - 1; j >= 0 || carry > 0; --j) {
       int product = carry;
       if (j >= 0) {
         product += a.at(i) * b.at(j);
@@ -90,20 +90,20 @@ std::pair<std::deque<digit>, std::deque<digit>>
 divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b) {
   std::deque<digit> quotient;
   std::deque<digit> remainder = a;
-  int a_size = a.size();
-  int b_size = b.size();
+  int aSize = a.size();
+  int bSize = b.size();
 
   // If b = 0 then throw logic error
-  if (b_size == 1 && b.back() == 0) {
+  if (bSize == 1 && b.back() == 0) {
     throw std::logic_error("Undefined, attempt to divide by zero.");
   }
   // If a = 0 then remainder = 0 and quotient = 0
-  else if (a_size == 1 && a.back() == 0) {
+  else if (aSize == 1 && a.back() == 0) {
     quotient = std::deque<digit>{0};
     remainder = std::deque<digit>{0};
   }
   // If b = 1 then remainder = 0 and quotient = a
-  else if (b_size == 1 && b.back() == 1) {
+  else if (bSize == 1 && b.back() == 1) {
     quotient = a;
     remainder = std::deque<digit>{0};
   }
@@ -119,10 +119,10 @@ divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b) {
   } else {
 
     // Set flag to keep track of the current index of a
-    int flag = b_size - 1;
-    remainder.erase(remainder.begin() + b_size, remainder.end());
+    int flag = bSize - 1;
+    remainder.erase(remainder.begin() + bSize, remainder.end());
 
-    for (auto i = flag; i < a_size; ++i) {
+    for (auto i = flag; i < aSize; ++i) {
       if (greater(remainder, b) || equal(remainder, b)) {
         // If temp is greater than b but with same size, guess x in [1,
         // temp.back() / b.back()] . Otherwise, guess x in [1, 9]
@@ -134,7 +134,7 @@ divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b) {
         quotient.push_back(x);
         remainder = subtract(remainder, multiply(b, std::deque<digit>{x}));
       }
-      if (i < a_size - 1) {
+      if (i < aSize - 1) {
         remainder.push_back(a.at(i + 1));
       }
     }
@@ -144,15 +144,15 @@ divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b) {
 
 // Check if a is greater than b
 bool greater(const std::deque<digit> &a, const std::deque<digit> &b) {
-  int a_size = a.size();
-  int b_size = b.size();
-  if (a_size > b_size) {
+  int aSize = a.size();
+  int bSize = b.size();
+  if (aSize > bSize) {
     return true;
-  } else if (a_size < b_size) {
+  } else if (aSize < bSize) {
     return false;
   } else {
     bool isGreater = true;
-    for (int i = 0; i < a_size; ++i) {
+    for (int i = 0; i < aSize; ++i) {
       if (a.at(i) != b.at(i)) {
         isGreater = a.at(i) > b.at(i);
         break;
@@ -167,8 +167,8 @@ bool equal(const std::deque<digit> &a, const std::deque<digit> &b) {
   if (a.size() != b.size()) {
     return false;
   }
-  int a_size = a.size();
-  for (int i = 0; i < a_size; ++i) {
+  int aSize = a.size();
+  for (int i = 0; i < aSize; ++i) {
     if (a.at(i) != b.at(i)) {
       return false;
     }
