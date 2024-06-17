@@ -15,8 +15,10 @@
  */
 
 #include "bigint.hpp"
+#include <filesystem>
 #include <fstream>
 #include <iostream>
+#include <sstream>
 #include <string>
 
 #define MAX_LENGTH 1000
@@ -132,34 +134,35 @@ void inputFromFile() {
 
 // Chaotic mode: Randomly generate input and output to file
 void chaoticMode() {
-  std::ofstream inputFile("test.inp");
-  std::ofstream outputFile("test.out");
   for (int i = 0; i < 50; ++i) {
     std::cout << "Generating test case #" << i + 1 << "..." << std::endl;
     int raa = rand() % 1001;
     int rab = rand() % 1001;
     BigInt ra(randomize(raa));
     BigInt rb(randomize(rab));
-    inputFile << "Test case #" << i + 1 << std::endl;
+    std::stringstream ss;
+    ss << "testcase_" << i + 1;
+    std::filesystem::create_directories(ss.str());
+    std::ofstream inputFile(ss.str() + "/test.inp");
+    std::ofstream outputFile(ss.str() + "/test.out");
     inputFile << ra << " " << rb << std::endl;
-    outputFile << "Test case #" << i + 1 << std::endl;
     outputFile << ra + rb << std::endl;
     outputFile << ra - rb << std::endl;
     outputFile << ra * rb << std::endl;
     try {
       outputFile << ra / rb << std::endl;
     } catch (std::logic_error &e) {
-      outputFile << e.what() << std::endl;
+      outputFile << "NULL" << std::endl;
     }
     try {
       outputFile << ra % rb << std::endl;
     } catch (std::logic_error &e) {
-      outputFile << e.what() << std::endl;
+      outputFile << "NULL" << std::endl;
     }
+    inputFile.close();
+    outputFile.close();
   }
-  std::cout << "Output has been written to test.out" << std::endl;
-  inputFile.close();
-  outputFile.close();
+  std::cout << "All files generated" << std::endl;
 }
 
 // Main function
