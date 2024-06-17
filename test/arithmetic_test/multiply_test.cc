@@ -24,14 +24,14 @@ TEST(Multiply, PosNeg) {
 
 TEST(Multiply, Zero) {
   BigInt a(0);
-  BigInt b(randomBigInt(1000));
+  BigInt b(randomize(1000));
   BigInt product = a * b;
   EXPECT_EQ(product.toString(), "0");
 }
 
 TEST(Multiply, One) {
   BigInt a(1);
-  BigInt b(randomBigInt(1000));
+  BigInt b(randomize(1000));
   BigInt product = a * b;
   EXPECT_EQ(product, b);
 }

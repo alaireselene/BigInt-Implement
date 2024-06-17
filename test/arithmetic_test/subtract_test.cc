@@ -30,7 +30,7 @@ TEST(Subtract, NegPos) {
 }
 
 TEST(Subtract, Zero) {
-  BigInt a(randomBigInt(1000));
+  BigInt a(randomize(1000));
   EXPECT_EQ((a - a).toString(), "0");
 }
 

@@ -49,6 +49,9 @@ BigInt::BigInt(const std::string &str) {
     if (str[0] == '-') {
       isNegative = true;
       start = 1;
+    } else if (str[0] == '+') {
+      isNegative = false;
+      start = 1;
     } else {
       isNegative = false;
     }

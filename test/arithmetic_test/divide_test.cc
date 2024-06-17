@@ -4,31 +4,31 @@
 #include <stdexcept>
 
 TEST(Divide, Zero) {
-  BigInt a(randomBigInt(1000));
+  BigInt a(randomize(1000));
   BigInt b(0);
   EXPECT_THROW(a / b, std::logic_error);
 }
 
 TEST(Divide, One) {
-  BigInt a(randomBigInt(1000));
+  BigInt a(randomize(1000));
   BigInt b(1);
   EXPECT_EQ(a / b, a);
 }
 
 TEST(Divide, NegativeOne) {
-  BigInt a(randomBigInt(1000));
+  BigInt a(randomize(1000));
   BigInt b(-1);
   EXPECT_EQ(a / b, -a);
 }
 
 TEST(Divide, Equal) {
-  BigInt a(randomBigInt(1000));
+  BigInt a(randomize(1000));
   EXPECT_EQ(a / a, BigInt(1));
 }
 
 TEST(Divide, Greater) {
-  BigInt a(randomBigInt(999));
-  BigInt b(randomBigInt(1000));
+  BigInt a(randomize(999));
+  BigInt b(randomize(1000));
   EXPECT_EQ(a / b, BigInt(0));
 }
 

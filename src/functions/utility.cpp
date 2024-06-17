@@ -4,7 +4,8 @@
 #include <random>
 
 // Add two deques of digits
-std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b) {
+std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b,
+                      const bool &bNeg = false) {
   std::deque<digit> result;
   int aSize = a.size();
   int bSize = b.size();
@@ -17,13 +18,27 @@ std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b) {
       sum += a.at(aSize - 1 - i);
     }
     if (i < bSize) {
-      sum += b.at(bSize - 1 - i);
+      if (bNeg) {
+        sum -= b.at(bSize - 1 - i);
+      } else {
+        sum += b.at(bSize - 1 - i);
+      }
+    }
+    if (sum < 0) {
+      sum += 10;
+      carry = -1;
+    } else {
+      carry = 0;
     }
     result.push_front(sum % 10);
-    carry = sum / 10;
+    if (!bNeg) {
+      carry = sum / 10;
+    }
     ++i;
   }
-
+  while (result.size() > 1 && result.front() == 0) {
+    result.pop_front();
+  }
   return result;
 }
 
@@ -177,7 +192,7 @@ bool equal(const std::deque<digit> &a, const std::deque<digit> &b) {
 }
 
 // Generate a random BigInt with a given size
-BigInt randomBigInt(const int &size) {
+BigInt randomize(const int &size) {
   std::mt19937 gen(std::chrono::steady_clock::now().time_since_epoch().count());
   std::uniform_int_distribution<int> dis(0, 9);
   std::uniform_int_distribution<int> sign(0, 1);

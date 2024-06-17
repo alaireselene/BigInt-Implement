@@ -103,7 +103,8 @@ private:
 };
 
 // Utility Functions
-std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b);
+std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b,
+                      const bool &bNeg);
 std::deque<digit> subtract(const std::deque<digit> &a,
                            const std::deque<digit> &b);
 std::deque<digit> multiply(const std::deque<digit> &a,
@@ -112,5 +113,5 @@ std::pair<std::deque<digit>, std::deque<digit>>
 divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b);
 bool greater(const std::deque<digit> &a, const std::deque<digit> &b);
 bool equal(const std::deque<digit> &a, const std::deque<digit> &b);
-BigInt randomBigInt(const int &size);
+BigInt randomize(const int &size);
 #endif

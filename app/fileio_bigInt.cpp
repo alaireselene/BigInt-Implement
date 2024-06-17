@@ -36,7 +36,7 @@ int main() {
     std::mt19937 gen(
         std::chrono::steady_clock::now().time_since_epoch().count());
     std::uniform_int_distribution<int> dis(15, MAX_LENGTH);
-    _inputFile << randomBigInt(dis(gen)) << std::endl << randomBigInt(dis(gen));
+    _inputFile << randomize(dis(gen)) << std::endl << randomize(dis(gen));
     _inputFile.close();
     inputFile.open("test.inp");
   }

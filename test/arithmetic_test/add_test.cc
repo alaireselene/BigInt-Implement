@@ -2,7 +2,7 @@
 #include <gtest/gtest.h>
 
 TEST(Add, Zero) {
-  BigInt a = randomBigInt(1000);
+  BigInt a = randomize(1000);
   BigInt b(0);
   EXPECT_EQ(a + b, a);
 }
