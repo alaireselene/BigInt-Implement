@@ -10,9 +10,8 @@ std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b,
   int aSize = a.size();
   int bSize = b.size();
   int carry = 0;
-  int i = 0;
 
-  while (i < aSize || i < bSize || carry > 0) {
+  for (int i = 0; i < aSize || i < bSize || carry > 0; ++i) {
     int sum = carry;
     if (i < aSize) {
       sum += a.at(aSize - 1 - i);
@@ -34,7 +33,6 @@ std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b,
     if (!bNeg) {
       carry = sum / 10;
     }
-    ++i;
   }
   while (result.size() > 1 && result.front() == 0) {
     result.pop_front();
@@ -107,7 +105,7 @@ divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b) {
     int flag = bSize - 1;
     remainder.erase(remainder.begin() + bSize, remainder.end());
 
-    for (auto i = flag; i < aSize; ++i) {
+    for (int i = flag; i < aSize; ++i) {
       if (greater(remainder, b) || equal(remainder, b)) {
         // If temp is greater than b but with same size, guess x in [1,
         // temp.back() / b.back()] . Otherwise, guess x in [1, 9]
