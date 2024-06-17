@@ -90,8 +90,6 @@ public:
   int toInt() const;
   long toLong() const;
   long long toLongLong() const;
-  void toFile(const std::string &filename) const;
-  BigInt fromFile(const std::string &filename);
 
   // I/O Operators
   friend std::ostream &operator<<(std::ostream &os, const BigInt &bigInt);

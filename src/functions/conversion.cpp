@@ -1,5 +1,4 @@
 #include "bigint.hpp"
-#include <fstream>
 
 // Convert a BigInt to string
 std::string BigInt::toString() const {
@@ -53,16 +52,4 @@ long long BigInt::toLongLong() const {
       result = result * 10 + digits.at(i);
   }
   return isNegative ? -result : result;
-}
-
-// Write the BigInt to a file. If the file cannot be opened,
-// throw invalid_argument exception.
-void BigInt::toFile(const std::string &filename) const {
-  std::ofstream file(filename);
-  if (file.is_open()) {
-    file << toString();
-    file.close();
-  } else {
-    throw std::invalid_argument("Unable to open file " + filename);
-  }
 }
