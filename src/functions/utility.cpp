@@ -3,9 +3,9 @@
 #include <cmath>
 #include <random>
 
-// Add two deques of digits
+// Add two deques of digits. If bNeg is true, subtract b from a.
 std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b,
-                      const bool &bNeg = false) {
+                      const bool &bNeg) {
   std::deque<digit> result;
   int aSize = a.size();
   int bSize = b.size();
@@ -42,37 +42,7 @@ std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b,
   return result;
 }
 
-std::deque<digit> subtract(const std::deque<digit> &a,
-                           const std::deque<digit> &b) {
-  std::deque<digit> result;
-  int aSize = a.size();
-  int bSize = b.size();
-  int borrow = 0;
-  int i = 0;
-  while (i < aSize || i < bSize) {
-    int diff = borrow;
-    if (i < aSize) {
-      diff += a.at(aSize - i - 1);
-    }
-    if (i < bSize) {
-      diff -= b.at(bSize - i - 1);
-    }
-    if (diff < 0) {
-      diff += 10;
-      borrow = -1;
-    } else {
-      borrow = 0;
-    }
-    result.push_front(diff);
-    ++i;
-  }
-  while (result.size() > 1 && result.front() == 0) {
-    result.pop_front();
-  }
-  return result;
-}
-
-// Multiply two deques of digits
+// Multiply two deques of digits.
 std::deque<digit> multiply(const std::deque<digit> &a,
                            const std::deque<digit> &b) {
   std::deque<digit> result;
@@ -147,7 +117,7 @@ divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b) {
           --x;
         }
         quotient.push_back(x);
-        remainder = subtract(remainder, multiply(b, std::deque<digit>{x}));
+        remainder = add(remainder, multiply(b, std::deque<digit>{x}), true);
       }
       if (i < aSize - 1) {
         remainder.push_back(a.at(i + 1));

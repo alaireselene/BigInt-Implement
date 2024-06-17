@@ -8,10 +8,10 @@ BigInt BigInt::operator+(const BigInt &other) const {
     result.isNegative = isNegative;
   } else {
     if (greater(digits, other.digits)) {
-      result.digits = subtract(digits, other.digits);
+      result.digits = add(digits, other.digits, true);
       result.isNegative = isNegative;
     } else {
-      result.digits = subtract(other.digits, digits);
+      result.digits = add(other.digits, digits, true);
       result.isNegative = other.isNegative;
     }
   }
@@ -26,10 +26,10 @@ BigInt BigInt::operator-(const BigInt &other) const {
     result.isNegative = isNegative;
   } else {
     if (greater(digits, other.digits)) {
-      result.digits = subtract(digits, other.digits);
+      result.digits = add(digits, other.digits, true);
       result.isNegative = isNegative;
     } else {
-      result.digits = subtract(other.digits, digits);
+      result.digits = add(other.digits, digits, true);
       result.isNegative = !(other.isNegative);
     }
   }

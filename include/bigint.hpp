@@ -104,9 +104,7 @@ private:
 
 // Utility Functions
 std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b,
-                      const bool &bNeg);
-std::deque<digit> subtract(const std::deque<digit> &a,
-                           const std::deque<digit> &b);
+                      const bool &bNeg = false);
 std::deque<digit> multiply(const std::deque<digit> &a,
                            const std::deque<digit> &b);
 std::pair<std::deque<digit>, std::deque<digit>>
