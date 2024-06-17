@@ -33,7 +33,8 @@ BigInt BigInt::operator-(const BigInt &other) const {
       result.isNegative = !(other.isNegative);
     }
   }
-  return result;
+  return result.digits.size() == 1 && result.digits.front() == 0 ? BigInt(0)
+                                                                 : result;
 }
 
 BigInt BigInt::operator*(const BigInt &other) const {

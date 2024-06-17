@@ -27,7 +27,7 @@ BigInt::BigInt(long long int value) {
   }
 }
 
-// deque of digits and sign to BigInt
+// Deque of digits and sign to BigInt
 BigInt::BigInt(const std::deque<digit> &digits, bool isNegative)
     : digits(digits), isNegative(isNegative) {
   if (digits.size() == 0) {
@@ -52,16 +52,16 @@ BigInt::BigInt(const std::string &str) {
     } else {
       isNegative = false;
     }
-
-    for (int i = start; i < str.length(); ++i) {
+    int str_len = str.length();
+    for (int i = start; i < str_len; ++i) {
       if (str[i] < '0' || str[i] > '9') {
         std::string error = "Your input contains non-digit characters " +
-                            std::to_string(str[i]) + " with ASCII value " +
+                            str.substr(i, 1) + " with ASCII value " +
                             std::to_string(str[i]) +
                             ". Please enter a valid number.";
         throw std::invalid_argument(error);
       }
-      if (i != start || str[i] != '0') {
+      if (i != start || str[i] != '0' || str_len == 1) {
         digits.push_back(digit(str[i] - '0'));
       }
     }

@@ -17,32 +17,29 @@ class BigInt {
 public:
   // Constructors
 
-  // Default constructor (e.g., initializes to zero)
   BigInt();
-  // Copy constructor
   BigInt(const BigInt &num);
-  // Construct from an integer
   BigInt(long long value);
-  // Construct from a string representation
   BigInt(const std::string &str);
-  // Construct from a deque of digits and a sign
   BigInt(const std::deque<digit> &digits, bool isNegative);
 
   // Arithmetic Operators
+
+  // Binary Operators
   BigInt operator+(const BigInt &other) const;
-  BigInt operator-(const BigInt &other) const;
-  BigInt operator*(const BigInt &other) const;
-  BigInt operator/(const BigInt &other) const;
-  BigInt operator%(const BigInt &other) const;
   BigInt operator+(const long long &other) const;
-  BigInt operator-(const long long &other) const;
-  BigInt operator*(const long long &other) const;
-  BigInt operator/(const long long &other) const;
-  BigInt operator%(const long long &other) const;
   BigInt operator+(const std::string &other) const;
+  BigInt operator-(const BigInt &other) const;
+  BigInt operator-(const long long &other) const;
   BigInt operator-(const std::string &other) const;
+  BigInt operator*(const BigInt &other) const;
+  BigInt operator*(const long long &other) const;
   BigInt operator*(const std::string &other) const;
+  BigInt operator/(const BigInt &other) const;
+  BigInt operator/(const long long &other) const;
   BigInt operator/(const std::string &other) const;
+  BigInt operator%(const BigInt &other) const;
+  BigInt operator%(const long long &other) const;
   BigInt operator%(const std::string &other) const;
 
   // Unary Operators
@@ -96,14 +93,14 @@ public:
   void toFile(const std::string &filename) const;
   BigInt fromFile(const std::string &filename);
 
-  // Utility Functions
+  // I/O Operators
   friend std::ostream &operator<<(std::ostream &os, const BigInt &bigInt);
   friend std::istream &operator>>(std::istream &is, BigInt &bigInt);
 
 private:
-  // The digits of the BigInt, but with reversed order
+  // The digits of the BigInt
   std::deque<digit> digits;
-  // Sign of the BigInt. True if negative, false otherwise
+  // Sign of the BigInt. True if negative, false otherwise.
   bool isNegative;
 };
 

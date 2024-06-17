@@ -3,6 +3,7 @@
 #include <cmath>
 #include <random>
 
+// Add two deques of digits
 std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b) {
   std::deque<digit> result;
   int a_size = a.size();
@@ -56,6 +57,7 @@ std::deque<digit> subtract(const std::deque<digit> &a,
   return result;
 }
 
+// Multiply two deques of digits
 std::deque<digit> multiply(const std::deque<digit> &a,
                            const std::deque<digit> &b) {
   std::deque<digit> result;
@@ -81,6 +83,7 @@ std::deque<digit> multiply(const std::deque<digit> &a,
   return result;
 }
 
+// Divide two deques of digits
 std::pair<std::deque<digit>, std::deque<digit>>
 divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b) {
   std::deque<digit> quotient;
@@ -88,9 +91,9 @@ divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b) {
   int a_size = a.size();
   int b_size = b.size();
 
-  // If b = 0 then throw logic exception
+  // If b = 0 then throw logic error
   if (b_size == 1 && b.back() == 0) {
-    throw std::logic_error("Attempted division by zero");
+    throw std::logic_error("Undefined, attempt to divide by zero.");
   }
   // If a = 0 then remainder = 0 and quotient = 0
   else if (a_size == 1 && a.back() == 0) {
@@ -112,13 +115,12 @@ divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b) {
   else if (greater(b, a)) {
     quotient = std::deque<digit>{0};
   } else {
-    // TODO: Implement division algorithm
 
     // Set flag to keep track of the current index of a
     int flag = b_size - 1;
     remainder.erase(remainder.begin() + b_size, remainder.end());
 
-    for (int i = flag; i < a_size; ++i) {
+    for (auto i = flag; i < a_size; ++i) {
       if (greater(remainder, b) || equal(remainder, b)) {
         // If temp is greater than b but with same size, guess x in [1,
         // temp.back() / b.back()] . Otherwise, guess x in [1, 9]
@@ -128,8 +130,6 @@ divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b) {
           --x;
         }
         quotient.push_back(x);
-        // To make implementation easier, I fill the temp deque with 0s then
-        // subtract remainder with temp.
         remainder = subtract(remainder, multiply(b, std::deque<digit>{x}));
       }
       if (i < a_size - 1) {
@@ -140,6 +140,7 @@ divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b) {
   return std::make_pair(quotient, remainder);
 }
 
+// Check if a is greater than b
 bool greater(const std::deque<digit> &a, const std::deque<digit> &b) {
   int a_size = a.size();
   int b_size = b.size();
@@ -159,11 +160,13 @@ bool greater(const std::deque<digit> &a, const std::deque<digit> &b) {
   }
 }
 
+// Check if a is equal to b
 bool equal(const std::deque<digit> &a, const std::deque<digit> &b) {
   if (a.size() != b.size()) {
     return false;
   }
-  for (int i = 0; i < a.size(); ++i) {
+  int a_size = a.size();
+  for (int i = 0; i < a_size; ++i) {
     if (a.at(i) != b.at(i)) {
       return false;
     }
@@ -171,6 +174,7 @@ bool equal(const std::deque<digit> &a, const std::deque<digit> &b) {
   return true;
 }
 
+// Generate a random BigInt with a given size
 BigInt randomBigInt(const int &size) {
   std::mt19937 gen(std::chrono::steady_clock::now().time_since_epoch().count());
   std::uniform_int_distribution<int> dis(0, 9);
