@@ -69,8 +69,10 @@ std::deque<digit> multiply(const std::deque<digit> &a,
     int carry = 0;
     for (int j = b_size - 1; j >= 0 || carry > 0; --j) {
       int product = carry;
-      if (j >= 0)
+      if (j >= 0) {
         product += a.at(i) * b.at(j);
+      }
+
       partial.push_front(product % 10);
       carry = product / 10;
     }
