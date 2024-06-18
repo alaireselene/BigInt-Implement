@@ -17,15 +17,15 @@ bool BigInt::operator==(const BigInt &other) const {
 bool BigInt::operator!=(const BigInt &other) const { return !(*this == other); }
 
 bool BigInt::operator<(const BigInt &other) const {
-  if (isNegative != other.isNegative) {
-    return isNegative;
-  }
-
-  if (digits.size() != other.digits.size()) {
+  if (isNegative && !other.isNegative) {
+    return true;
+  } else if (!isNegative && other.isNegative) {
+    return false;
+  } else if (digits.size() != other.digits.size()) {
     return digits.size() < other.digits.size();
   }
 
-  for (int i = digits.size() - 1; i >= 0; i--) {
+  for (size_t i = 0; i < digits.size(); ++i) {
     if (digits[i] != other.digits[i]) {
       return digits[i] < other.digits[i];
     }

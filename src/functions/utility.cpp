@@ -59,8 +59,10 @@ std::deque<digit> multiply(const std::deque<digit> &a,
   int bSize = b.size();
   for (int i = aSize - 1; i >= 0; --i) {
     std::deque<digit> partial;
+    // Left shift the partial product by aSize - 1 - i
     partial.insert(partial.begin(), aSize - 1 - i, 0);
     int carry = 0;
+    // Multiply a[i] with b and add carry
     for (int j = bSize - 1; j >= 0 || carry > 0; --j) {
       int product = carry;
       if (j >= 0) {
@@ -72,6 +74,7 @@ std::deque<digit> multiply(const std::deque<digit> &a,
     }
     result = add(result, partial);
   }
+  // Remove leading zeros
   while (result.size() > 1 && result.front() == 0) {
     result.pop_front();
   }
@@ -125,6 +128,7 @@ divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b) {
         while (greater(multiply(b, std::deque<digit>{x}), remainder)) {
           --x;
         }
+        // Add x to quotient and subtract b * x from remainder
         quotient.push_back(x);
         remainder = add(remainder, multiply(b, std::deque<digit>{x}), true);
       }
@@ -136,7 +140,7 @@ divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b) {
   return std::make_pair(quotient, remainder);
 }
 
-// Check if a is greater than b
+// Check if a is greater than b by comparing digits.
 bool greater(const std::deque<digit> &a, const std::deque<digit> &b) {
   int aSize = a.size();
   int bSize = b.size();

@@ -45,6 +45,7 @@ BigInt::BigInt(const std::string &str) {
   if (str.empty()) {
     throw std::invalid_argument("Your input is empty. Please enter a number.");
   } else {
+    // Binding the sign and setting the start index to read the digits
     int start = 0;
     if (str[0] == '-') {
       isNegative = true;
@@ -56,6 +57,7 @@ BigInt::BigInt(const std::string &str) {
       isNegative = false;
     }
     int str_len = str.length();
+    // Check if the input contains non-digit characters. If so, throw an error.
     for (int i = start; i < str_len; ++i) {
       if (str[i] < '0' || str[i] > '9') {
         std::string error = "Your input contains non-digit characters " +

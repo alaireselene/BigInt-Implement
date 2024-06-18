@@ -7,13 +7,3 @@ BigInt BigInt::operator-() const {
   result.isNegative = !result.isNegative;
   return result;
 }
-
-BigInt BigInt::operator++(int) {
-  *this += BigInt(1);
-  return *this;
-}
-
-BigInt BigInt::operator--(int) {
-  *this -= BigInt(1);
-  return *this;
-}

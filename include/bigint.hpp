@@ -1,6 +1,22 @@
 /*
- * bigint.h
- * This file contains the declaration of the BigInt class.
+  * BigInt Library
+
+  Name: Nguyen Truong Son
+  Student ID: 20227148
+  Class: 150327
+  Project: Project 2 - BigInt Library
+  Date: 17/06/2024
+
+  Description: This library provides a BigInt class that supports arithmetic
+  operations on arbitrarily large integers. The BigInt class is implemented
+  using a deque of digits, where each digit is a char type. The BigInt class
+  supports the following operations:
+  - Unary operators: +, -
+  - Binary operators: +, -, *, /, %
+  - Comparison operators: ==, !=, <, >, <=, >=
+  - Assignment operators: +=, -=, *=, /=, %=
+  - Conversion functions: toString
+  - I/O operators: <<, >>
  */
 
 #ifndef BIGINT_H
@@ -45,8 +61,6 @@ public:
   // Unary Operators
   BigInt operator+() const;
   BigInt operator-() const;
-  BigInt operator++(int);
-  BigInt operator--(int);
 
   // Comparison Operators
   bool operator==(const BigInt &other) const;
@@ -87,9 +101,6 @@ public:
 
   // Conversion Functions
   std::string toString() const;
-  int toInt() const;
-  long toLong() const;
-  long long toLongLong() const;
 
   // I/O Operators
   friend std::ostream &operator<<(std::ostream &os, const BigInt &bigInt);
@@ -103,13 +114,24 @@ private:
 };
 
 // Utility Functions
+
+// Add two deques of digits and return sum of them. If bNeg is true, subtract b
 std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b,
                       const bool &bNeg = false);
+
+// Multiply two deques of digits and return product of them
 std::deque<digit> multiply(const std::deque<digit> &a,
                            const std::deque<digit> &b);
+
+// Divide two deques of digits and return quotient and remainder
 std::pair<std::deque<digit>, std::deque<digit>>
 divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b);
+
+// Find greater between two deques of digits a.k.a compare absolute values of
+// two BigInts
 bool greater(const std::deque<digit> &a, const std::deque<digit> &b);
+
+// Match two deques of digits a.k.a compare absolute values of two BigInts
 bool equal(const std::deque<digit> &a, const std::deque<digit> &b);
 BigInt randomize(const int &size);
 #endif

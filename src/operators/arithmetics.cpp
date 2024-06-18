@@ -55,7 +55,9 @@ BigInt BigInt::operator/(const BigInt &other) const {
 BigInt BigInt::operator%(const BigInt &other) const {
   std::deque<digit> result =
       divideWithRemainder(this->digits, other.digits).second;
-  return BigInt(result, isNegative == other.isNegative ? false : true);
+  return result.size() == 1 && result.front() == 0
+             ? BigInt(0)
+             : BigInt(result, isNegative == other.isNegative ? false : true);
 }
 
 BigInt BigInt::operator+(const long long &other) const {

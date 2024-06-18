@@ -15,6 +15,7 @@
  */
 
 #include "bigint.hpp"
+#include <exception>
 #include <filesystem>
 #include <fstream>
 #include <iostream>
@@ -22,6 +23,8 @@
 #include <string>
 
 #define MAX_LENGTH 1000
+
+BigInt a, b, sum, diff, prod, idiv, mod;
 
 // Print the menu
 void printMenu() {
@@ -36,15 +39,16 @@ void printMenu() {
 // to test.out
 void inputFromKeyboard() {
   std::string aString, bString;
-  std::ofstream outputFile("test.out");
   try {
     std::cout << "Enter two integers a and b (each with at most " << MAX_LENGTH
               << " digits): ";
     std::cin >> aString >> bString;
 
+    // Throw exception if the length of a and b exceeds the maximum limit.
+    // Otherwise, proceed with caution.
     if (aString.length() <= MAX_LENGTH && bString.length() <= MAX_LENGTH) {
-      BigInt a(aString);
-      BigInt b(bString);
+      a = BigInt(aString);
+      b = BigInt(bString);
     } else if (aString.length() * bString.length() >= aString.max_size()) {
       throw std::invalid_argument("The product of the lengths of a and b "
                                   "exceeds the maximum limit of system.");
@@ -55,40 +59,10 @@ void inputFromKeyboard() {
                    "proceed with caution."
                 << std::endl;
     }
-    BigInt a(aString);
-    BigInt b(bString);
-
-    BigInt sum(a + b);
-    BigInt diff(a - b);
-    BigInt prod(a * b);
-    std::cout << "a + b = " << sum << std::endl;
-    outputFile << sum << std::endl;
-    std::cout << "a - b = " << diff << std::endl;
-    outputFile << diff << std::endl;
-    std::cout << "a * b = " << prod << std::endl;
-    outputFile << prod << std::endl;
-    try {
-      BigInt div(a / b);
-      std::cout << "a / b = " << a / b << std::endl;
-      outputFile << div << std::endl;
-    } catch (std::logic_error &e) {
-      std::cout << "a / b = " << e.what() << std::endl;
-      outputFile << "NULL" << std::endl;
-    }
-    try {
-      BigInt mod(a % b);
-      std::cout << "a % b = " << a % b << std::endl;
-      outputFile << mod << std::endl;
-    } catch (std::logic_error &e) {
-      std::cout << "a % b = " << e.what() << std::endl;
-      outputFile << "NULL" << std::endl;
-    }
   } catch (std::invalid_argument &e) {
     std::cout << e.what() << std::endl;
-    outputFile << "NULL" << std::endl;
+    return;
   }
-  std::cout << "Output has been written to test.out" << std::endl;
-  outputFile.close();
 }
 
 // Take input from file
@@ -97,42 +71,61 @@ void inputFromFile() {
   std::ofstream outputFile("test.out");
   std::string aString, bString;
   if (!inputFile.is_open()) {
-    std::cout << "test.inp is not exist or not found. We will create a new "
-                 "file for you."
-              << std::endl;
-    std::ofstream _inputFile("test.inp");
-    _inputFile << "1234567890123456789012345678901234567890\n"
-               << "9876543210987654321098765432109876543210";
-    _inputFile.close();
-    inputFile.open("test.inp");
+    throw std::invalid_argument("test.inp is not exist or not found.");
   }
-  try {
-    inputFile >> aString >> bString;
-    BigInt a(aString);
-    BigInt b(bString);
-    outputFile << a + b << std::endl;
-    outputFile << a - b << std::endl;
-    outputFile << a * b << std::endl;
-    try {
-      outputFile << a / b << std::endl;
-    } catch (std::logic_error &e) {
-      outputFile << e.what() << std::endl;
-    }
-    try {
-      outputFile << a % b << std::endl;
-    } catch (std::logic_error &e) {
-      outputFile << e.what() << std::endl;
-    }
-  } catch (std::invalid_argument &e) {
-    std::cout << e.what() << std::endl;
-    outputFile << "NULL" << std::endl;
-  }
-  std::cout << "Output has been written to test.out" << std::endl;
+  inputFile >> aString >> bString;
   inputFile.close();
-  outputFile.close();
+  if (aString.length() <= MAX_LENGTH && bString.length() <= MAX_LENGTH) {
+    a = BigInt(aString);
+    b = BigInt(bString);
+  } else if (aString.length() * bString.length() >= aString.max_size()) {
+    throw std::invalid_argument("The product of the lengths of a and b "
+                                "exceeds the maximum limit of system.");
+  } else {
+    std::cout << "WARNING: The length of a or b exceeds the maximum limit of "
+              << MAX_LENGTH
+              << " digits, which may cause the program to run slowly. Please "
+                 "proceed with caution."
+              << std::endl;
+  }
 }
 
-// Chaotic mode: Randomly generate input and output to file
+// Do arithmetic operations, write output to console and file. If division by 0
+// then write "NULL" to file and show error message in console.
+void operate() {
+  std::ofstream outputFile("test.out");
+  sum = BigInt(a + b);
+  diff = BigInt(a - b);
+  prod = BigInt(a * b);
+  std::cout << "a + b = " << sum << std::endl;
+  std::cout << "a - b = " << diff << std::endl;
+  std::cout << "a * b = " << prod << std::endl;
+  outputFile << sum << std::endl;
+  outputFile << diff << std::endl;
+  outputFile << prod << std::endl;
+  try {
+    idiv = BigInt(a / b);
+    std::cout << "a / b = " << idiv << std::endl;
+    outputFile << a / b << std::endl;
+  } catch (std::logic_error &e) {
+    std::cout << "a / b = " << e.what() << std::endl;
+    outputFile << "NULL" << std::endl;
+  }
+  try {
+    mod = BigInt(a % b);
+    std::cout << "a % b = " << mod << std::endl;
+    outputFile << a % b << std::endl;
+  } catch (std::logic_error &e) {
+    std::cout << "a % b = " << e.what() << std::endl;
+    outputFile << "NULL" << std::endl;
+  }
+  outputFile.close();
+  std::cout << "Output has been written to test.out" << std::endl;
+}
+
+// Chaotic mode: Randomly generate input and output to file. For testcase
+// generation only. It will generate 50 testcases, each with two random integers
+// a and b, then write the input to test.inp and the output to test.out.
 void chaoticMode() {
   for (int i = 0; i < 50; ++i) {
     std::cout << "Generating test case #" << i + 1 << "..." << std::endl;
@@ -163,6 +156,7 @@ void chaoticMode() {
     outputFile.close();
   }
   std::cout << "All files generated" << std::endl;
+  return;
 }
 
 // Main function
@@ -173,10 +167,20 @@ int main() {
     std::cout << "Enter your choice: ";
     std::cin >> choice;
     if (choice == "1") {
-      inputFromKeyboard();
+      try {
+        inputFromKeyboard();
+        operate();
+      } catch (std::exception &e) {
+        std::cout << e.what() << std::endl;
+      }
       break;
     } else if (choice == "2") {
-      inputFromFile();
+      try {
+        inputFromFile();
+        operate();
+      } catch (std::exception &e) {
+        std::cout << e.what() << std::endl;
+      }
       break;
     } else if (choice == "3") {
       chaoticMode();
