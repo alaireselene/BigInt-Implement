@@ -3,6 +3,9 @@
 #include <cmath>
 #include <random>
 
+// Return length of BigInt
+int BigInt::length() const { return digits.size(); }
+
 // Add two deques of digits. If bNeg is true, subtract b from a.
 std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b,
                       const bool &bNeg) {
@@ -43,6 +46,7 @@ std::deque<digit> add(const std::deque<digit> &a, const std::deque<digit> &b,
 // Multiply two deques of digits.
 std::deque<digit> multiply(const std::deque<digit> &a,
                            const std::deque<digit> &b) {
+  auto start = std::chrono::high_resolution_clock::now();
   std::deque<digit> result;
   // If a or b is 0, return 0
   if ((a.size() == 1 && a.front() == 0) || (b.size() == 1 && b.front() == 0)) {
@@ -57,7 +61,25 @@ std::deque<digit> multiply(const std::deque<digit> &a,
   }
   int aSize = a.size();
   int bSize = b.size();
+  // If a and b exceed limit of system, throw runtime error
+  std::string dummyString;
+  if (aSize + bSize > dummyString.max_size()) {
+    throw std::runtime_error(
+        "Multiplication exceeds system limit. Please reduce "
+        "the length of a or b and try again.");
+  }
+
   for (int i = aSize - 1; i >= 0; --i) {
+    // Check if the multiplication is taking too long
+    auto now = std::chrono::high_resolution_clock::now();
+    auto duration =
+        std::chrono::duration_cast<std::chrono::milliseconds>(now - start);
+    if (duration.count() > 1000) {
+      throw std::runtime_error("Timeout: Digits multiplication is taking too "
+                               "long. Please reduce the "
+                               "length of a or b and try again.");
+    }
+
     std::deque<digit> partial;
     // Left shift the partial product by aSize - 1 - i
     partial.insert(partial.begin(), aSize - 1 - i, 0);
@@ -78,13 +100,13 @@ std::deque<digit> multiply(const std::deque<digit> &a,
   while (result.size() > 1 && result.front() == 0) {
     result.pop_front();
   }
-
   return result;
 }
 
 // Divide two deques of digits
 std::pair<std::deque<digit>, std::deque<digit>>
 divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b) {
+  auto start = std::chrono::high_resolution_clock::now();
   std::deque<digit> quotient;
   std::deque<digit> remainder = a;
   int aSize = a.size();
@@ -92,7 +114,8 @@ divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b) {
 
   // If b = 0 then throw logic error
   if (bSize == 1 && b.back() == 0) {
-    throw std::logic_error("Undefined, attempt to divide by zero.");
+    throw std::logic_error("Undefined, attempt to divide by zero. Please enter "
+                           "a non-zero divisor.");
   }
   // If a = 0 then remainder = 0 and quotient = 0
   else if (aSize == 1 && a.back() == 0) {
@@ -120,6 +143,16 @@ divideWithRemainder(const std::deque<digit> &a, const std::deque<digit> &b) {
     remainder.erase(remainder.begin() + bSize, remainder.end());
 
     for (int i = flag; i < aSize; ++i) {
+      // Check if the division is taking too long
+      auto now = std::chrono::high_resolution_clock::now();
+      auto duration =
+          std::chrono::duration_cast<std::chrono::milliseconds>(now - start);
+      if (duration.count() > 13000) {
+        throw std::runtime_error(
+            "Timeout: Digits division is taking too long. Please reduce the "
+            "length of a or b and try again.");
+      }
+
       if (greater(remainder, b) || equal(remainder, b)) {
         // If temp is greater than b but with same size, guess x in [1,
         // temp.back() / b.back()] . Otherwise, guess x in [1, 9]

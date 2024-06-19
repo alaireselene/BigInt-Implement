@@ -1,0 +1,1623 @@
+Start testing: Jun 19 15:03 SE Asia Standard Time
+----------------------------------------------------------
+1/60 Testing: UtilityTest.DivideWithRemainderByOne
+1/60 Test: UtilityTest.DivideWithRemainderByOne
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=UtilityTest.DivideWithRemainderByOne" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"UtilityTest.DivideWithRemainderByOne" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = UtilityTest.DivideWithRemainderByOne
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from UtilityTest
+[ RUN      ] UtilityTest.DivideWithRemainderByOne
+[       OK ] UtilityTest.DivideWithRemainderByOne (0 ms)
+[----------] 1 test from UtilityTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"UtilityTest.DivideWithRemainderByOne" end time: Jun 19 15:03 SE Asia Standard Time
+"UtilityTest.DivideWithRemainderByOne" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/60 Testing: UtilityTest.DivideWithRemainderBySelf
+2/60 Test: UtilityTest.DivideWithRemainderBySelf
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=UtilityTest.DivideWithRemainderBySelf" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"UtilityTest.DivideWithRemainderBySelf" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = UtilityTest.DivideWithRemainderBySelf
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from UtilityTest
+[ RUN      ] UtilityTest.DivideWithRemainderBySelf
+[       OK ] UtilityTest.DivideWithRemainderBySelf (0 ms)
+[----------] 1 test from UtilityTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"UtilityTest.DivideWithRemainderBySelf" end time: Jun 19 15:03 SE Asia Standard Time
+"UtilityTest.DivideWithRemainderBySelf" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/60 Testing: UtilityTest.DivideWithRemainderByLarger
+3/60 Test: UtilityTest.DivideWithRemainderByLarger
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=UtilityTest.DivideWithRemainderByLarger" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"UtilityTest.DivideWithRemainderByLarger" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = UtilityTest.DivideWithRemainderByLarger
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from UtilityTest
+[ RUN      ] UtilityTest.DivideWithRemainderByLarger
+[       OK ] UtilityTest.DivideWithRemainderByLarger (0 ms)
+[----------] 1 test from UtilityTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"UtilityTest.DivideWithRemainderByLarger" end time: Jun 19 15:03 SE Asia Standard Time
+"UtilityTest.DivideWithRemainderByLarger" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/60 Testing: UtilityTest.DivideWithRemainderByZero
+4/60 Test: UtilityTest.DivideWithRemainderByZero
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=UtilityTest.DivideWithRemainderByZero" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"UtilityTest.DivideWithRemainderByZero" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = UtilityTest.DivideWithRemainderByZero
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from UtilityTest
+[ RUN      ] UtilityTest.DivideWithRemainderByZero
+[       OK ] UtilityTest.DivideWithRemainderByZero (3 ms)
+[----------] 1 test from UtilityTest (3 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (3 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"UtilityTest.DivideWithRemainderByZero" end time: Jun 19 15:03 SE Asia Standard Time
+"UtilityTest.DivideWithRemainderByZero" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/60 Testing: UtilityTest.DivideZeroWithRemainder
+5/60 Test: UtilityTest.DivideZeroWithRemainder
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=UtilityTest.DivideZeroWithRemainder" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"UtilityTest.DivideZeroWithRemainder" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = UtilityTest.DivideZeroWithRemainder
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from UtilityTest
+[ RUN      ] UtilityTest.DivideZeroWithRemainder
+[       OK ] UtilityTest.DivideZeroWithRemainder (0 ms)
+[----------] 1 test from UtilityTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"UtilityTest.DivideZeroWithRemainder" end time: Jun 19 15:03 SE Asia Standard Time
+"UtilityTest.DivideZeroWithRemainder" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/60 Testing: BigIntTest.UnaryMinus
+6/60 Test: BigIntTest.UnaryMinus
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=BigIntTest.UnaryMinus" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"BigIntTest.UnaryMinus" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BigIntTest.UnaryMinus
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BigIntTest
+[ RUN      ] BigIntTest.UnaryMinus
+[       OK ] BigIntTest.UnaryMinus (0 ms)
+[----------] 1 test from BigIntTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BigIntTest.UnaryMinus" end time: Jun 19 15:03 SE Asia Standard Time
+"BigIntTest.UnaryMinus" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/60 Testing: BigIntTest.UnaryPlus
+7/60 Test: BigIntTest.UnaryPlus
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=BigIntTest.UnaryPlus" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"BigIntTest.UnaryPlus" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BigIntTest.UnaryPlus
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BigIntTest
+[ RUN      ] BigIntTest.UnaryPlus
+[       OK ] BigIntTest.UnaryPlus (0 ms)
+[----------] 1 test from BigIntTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BigIntTest.UnaryPlus" end time: Jun 19 15:03 SE Asia Standard Time
+"BigIntTest.UnaryPlus" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/60 Testing: BigIntTest.OutputStreamOperator
+8/60 Test: BigIntTest.OutputStreamOperator
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=BigIntTest.OutputStreamOperator" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"BigIntTest.OutputStreamOperator" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BigIntTest.OutputStreamOperator
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BigIntTest
+[ RUN      ] BigIntTest.OutputStreamOperator
+[       OK ] BigIntTest.OutputStreamOperator (0 ms)
+[----------] 1 test from BigIntTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BigIntTest.OutputStreamOperator" end time: Jun 19 15:03 SE Asia Standard Time
+"BigIntTest.OutputStreamOperator" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/60 Testing: BigIntTest.InputStreamOperator
+9/60 Test: BigIntTest.InputStreamOperator
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=BigIntTest.InputStreamOperator" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"BigIntTest.InputStreamOperator" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BigIntTest.InputStreamOperator
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BigIntTest
+[ RUN      ] BigIntTest.InputStreamOperator
+[       OK ] BigIntTest.InputStreamOperator (0 ms)
+[----------] 1 test from BigIntTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BigIntTest.InputStreamOperator" end time: Jun 19 15:03 SE Asia Standard Time
+"BigIntTest.InputStreamOperator" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/60 Testing: BigIntTest.InputStreamOperatorWithInvalidInput
+10/60 Test: BigIntTest.InputStreamOperatorWithInvalidInput
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=BigIntTest.InputStreamOperatorWithInvalidInput" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"BigIntTest.InputStreamOperatorWithInvalidInput" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BigIntTest.InputStreamOperatorWithInvalidInput
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BigIntTest
+[ RUN      ] BigIntTest.InputStreamOperatorWithInvalidInput
+[       OK ] BigIntTest.InputStreamOperatorWithInvalidInput (1 ms)
+[----------] 1 test from BigIntTest (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BigIntTest.InputStreamOperatorWithInvalidInput" end time: Jun 19 15:03 SE Asia Standard Time
+"BigIntTest.InputStreamOperatorWithInvalidInput" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/60 Testing: BigIntTest.Equality
+11/60 Test: BigIntTest.Equality
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=BigIntTest.Equality" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"BigIntTest.Equality" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BigIntTest.Equality
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BigIntTest
+[ RUN      ] BigIntTest.Equality
+[       OK ] BigIntTest.Equality (0 ms)
+[----------] 1 test from BigIntTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BigIntTest.Equality" end time: Jun 19 15:03 SE Asia Standard Time
+"BigIntTest.Equality" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/60 Testing: BigIntTest.Inequality
+12/60 Test: BigIntTest.Inequality
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=BigIntTest.Inequality" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"BigIntTest.Inequality" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BigIntTest.Inequality
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BigIntTest
+[ RUN      ] BigIntTest.Inequality
+[       OK ] BigIntTest.Inequality (0 ms)
+[----------] 1 test from BigIntTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BigIntTest.Inequality" end time: Jun 19 15:03 SE Asia Standard Time
+"BigIntTest.Inequality" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/60 Testing: BigIntTest.LessThan
+13/60 Test: BigIntTest.LessThan
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=BigIntTest.LessThan" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"BigIntTest.LessThan" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BigIntTest.LessThan
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BigIntTest
+[ RUN      ] BigIntTest.LessThan
+[       OK ] BigIntTest.LessThan (0 ms)
+[----------] 1 test from BigIntTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BigIntTest.LessThan" end time: Jun 19 15:03 SE Asia Standard Time
+"BigIntTest.LessThan" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/60 Testing: BigIntTest.GreaterThan
+14/60 Test: BigIntTest.GreaterThan
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=BigIntTest.GreaterThan" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"BigIntTest.GreaterThan" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BigIntTest.GreaterThan
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BigIntTest
+[ RUN      ] BigIntTest.GreaterThan
+[       OK ] BigIntTest.GreaterThan (0 ms)
+[----------] 1 test from BigIntTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BigIntTest.GreaterThan" end time: Jun 19 15:03 SE Asia Standard Time
+"BigIntTest.GreaterThan" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/60 Testing: BigIntTest.LessThanOrEqual
+15/60 Test: BigIntTest.LessThanOrEqual
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=BigIntTest.LessThanOrEqual" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"BigIntTest.LessThanOrEqual" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BigIntTest.LessThanOrEqual
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BigIntTest
+[ RUN      ] BigIntTest.LessThanOrEqual
+[       OK ] BigIntTest.LessThanOrEqual (0 ms)
+[----------] 1 test from BigIntTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BigIntTest.LessThanOrEqual" end time: Jun 19 15:03 SE Asia Standard Time
+"BigIntTest.LessThanOrEqual" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/60 Testing: BigIntTest.GreaterThanOrEqual
+16/60 Test: BigIntTest.GreaterThanOrEqual
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=BigIntTest.GreaterThanOrEqual" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"BigIntTest.GreaterThanOrEqual" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BigIntTest.GreaterThanOrEqual
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BigIntTest
+[ RUN      ] BigIntTest.GreaterThanOrEqual
+[       OK ] BigIntTest.GreaterThanOrEqual (0 ms)
+[----------] 1 test from BigIntTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BigIntTest.GreaterThanOrEqual" end time: Jun 19 15:03 SE Asia Standard Time
+"BigIntTest.GreaterThanOrEqual" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/60 Testing: BigIntTest.EqualityWithLongLong
+17/60 Test: BigIntTest.EqualityWithLongLong
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=BigIntTest.EqualityWithLongLong" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"BigIntTest.EqualityWithLongLong" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BigIntTest.EqualityWithLongLong
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BigIntTest
+[ RUN      ] BigIntTest.EqualityWithLongLong
+[       OK ] BigIntTest.EqualityWithLongLong (0 ms)
+[----------] 1 test from BigIntTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BigIntTest.EqualityWithLongLong" end time: Jun 19 15:03 SE Asia Standard Time
+"BigIntTest.EqualityWithLongLong" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/60 Testing: BigIntTest.InequalityWithLongLong
+18/60 Test: BigIntTest.InequalityWithLongLong
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=BigIntTest.InequalityWithLongLong" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"BigIntTest.InequalityWithLongLong" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BigIntTest.InequalityWithLongLong
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BigIntTest
+[ RUN      ] BigIntTest.InequalityWithLongLong
+[       OK ] BigIntTest.InequalityWithLongLong (0 ms)
+[----------] 1 test from BigIntTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BigIntTest.InequalityWithLongLong" end time: Jun 19 15:03 SE Asia Standard Time
+"BigIntTest.InequalityWithLongLong" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/60 Testing: BigIntTest.LessThanWithLongLong
+19/60 Test: BigIntTest.LessThanWithLongLong
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=BigIntTest.LessThanWithLongLong" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"BigIntTest.LessThanWithLongLong" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BigIntTest.LessThanWithLongLong
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BigIntTest
+[ RUN      ] BigIntTest.LessThanWithLongLong
+[       OK ] BigIntTest.LessThanWithLongLong (0 ms)
+[----------] 1 test from BigIntTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BigIntTest.LessThanWithLongLong" end time: Jun 19 15:03 SE Asia Standard Time
+"BigIntTest.LessThanWithLongLong" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/60 Testing: BigIntTest.EqualityWithString
+20/60 Test: BigIntTest.EqualityWithString
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=BigIntTest.EqualityWithString" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"BigIntTest.EqualityWithString" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BigIntTest.EqualityWithString
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BigIntTest
+[ RUN      ] BigIntTest.EqualityWithString
+[       OK ] BigIntTest.EqualityWithString (0 ms)
+[----------] 1 test from BigIntTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BigIntTest.EqualityWithString" end time: Jun 19 15:03 SE Asia Standard Time
+"BigIntTest.EqualityWithString" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/60 Testing: BigIntTest.InequalityWithString
+21/60 Test: BigIntTest.InequalityWithString
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=BigIntTest.InequalityWithString" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"BigIntTest.InequalityWithString" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BigIntTest.InequalityWithString
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BigIntTest
+[ RUN      ] BigIntTest.InequalityWithString
+[       OK ] BigIntTest.InequalityWithString (0 ms)
+[----------] 1 test from BigIntTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BigIntTest.InequalityWithString" end time: Jun 19 15:03 SE Asia Standard Time
+"BigIntTest.InequalityWithString" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/60 Testing: BigIntTest.LessThanWithString
+22/60 Test: BigIntTest.LessThanWithString
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=BigIntTest.LessThanWithString" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"BigIntTest.LessThanWithString" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BigIntTest.LessThanWithString
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BigIntTest
+[ RUN      ] BigIntTest.LessThanWithString
+[       OK ] BigIntTest.LessThanWithString (0 ms)
+[----------] 1 test from BigIntTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BigIntTest.LessThanWithString" end time: Jun 19 15:03 SE Asia Standard Time
+"BigIntTest.LessThanWithString" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/60 Testing: BigIntTest.AssignmentOperator
+23/60 Test: BigIntTest.AssignmentOperator
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=BigIntTest.AssignmentOperator" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"BigIntTest.AssignmentOperator" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BigIntTest.AssignmentOperator
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BigIntTest
+[ RUN      ] BigIntTest.AssignmentOperator
+[       OK ] BigIntTest.AssignmentOperator (0 ms)
+[----------] 1 test from BigIntTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BigIntTest.AssignmentOperator" end time: Jun 19 15:03 SE Asia Standard Time
+"BigIntTest.AssignmentOperator" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/60 Testing: BigIntTest.SelfAssignment
+24/60 Test: BigIntTest.SelfAssignment
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=BigIntTest.SelfAssignment" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"BigIntTest.SelfAssignment" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BigIntTest.SelfAssignment
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BigIntTest
+[ RUN      ] BigIntTest.SelfAssignment
+[       OK ] BigIntTest.SelfAssignment (0 ms)
+[----------] 1 test from BigIntTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BigIntTest.SelfAssignment" end time: Jun 19 15:03 SE Asia Standard Time
+"BigIntTest.SelfAssignment" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/60 Testing: BigIntTest.ChainAssignment
+25/60 Test: BigIntTest.ChainAssignment
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=BigIntTest.ChainAssignment" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"BigIntTest.ChainAssignment" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = BigIntTest.ChainAssignment
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BigIntTest
+[ RUN      ] BigIntTest.ChainAssignment
+[       OK ] BigIntTest.ChainAssignment (0 ms)
+[----------] 1 test from BigIntTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BigIntTest.ChainAssignment" end time: Jun 19 15:03 SE Asia Standard Time
+"BigIntTest.ChainAssignment" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/60 Testing: NumberIntegrity.PosStr
+26/60 Test: NumberIntegrity.PosStr
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=NumberIntegrity.PosStr" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"NumberIntegrity.PosStr" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = NumberIntegrity.PosStr
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NumberIntegrity
+[ RUN      ] NumberIntegrity.PosStr
+[       OK ] NumberIntegrity.PosStr (0 ms)
+[----------] 1 test from NumberIntegrity (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NumberIntegrity.PosStr" end time: Jun 19 15:03 SE Asia Standard Time
+"NumberIntegrity.PosStr" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/60 Testing: NumberIntegrity.NegStr
+27/60 Test: NumberIntegrity.NegStr
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=NumberIntegrity.NegStr" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"NumberIntegrity.NegStr" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = NumberIntegrity.NegStr
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NumberIntegrity
+[ RUN      ] NumberIntegrity.NegStr
+[       OK ] NumberIntegrity.NegStr (0 ms)
+[----------] 1 test from NumberIntegrity (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NumberIntegrity.NegStr" end time: Jun 19 15:03 SE Asia Standard Time
+"NumberIntegrity.NegStr" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/60 Testing: NumberIntegrity.PosInt
+28/60 Test: NumberIntegrity.PosInt
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=NumberIntegrity.PosInt" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"NumberIntegrity.PosInt" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = NumberIntegrity.PosInt
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NumberIntegrity
+[ RUN      ] NumberIntegrity.PosInt
+[       OK ] NumberIntegrity.PosInt (0 ms)
+[----------] 1 test from NumberIntegrity (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NumberIntegrity.PosInt" end time: Jun 19 15:03 SE Asia Standard Time
+"NumberIntegrity.PosInt" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/60 Testing: NumberIntegrity.NegInt
+29/60 Test: NumberIntegrity.NegInt
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=NumberIntegrity.NegInt" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"NumberIntegrity.NegInt" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = NumberIntegrity.NegInt
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from NumberIntegrity
+[ RUN      ] NumberIntegrity.NegInt
+[       OK ] NumberIntegrity.NegInt (0 ms)
+[----------] 1 test from NumberIntegrity (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"NumberIntegrity.NegInt" end time: Jun 19 15:03 SE Asia Standard Time
+"NumberIntegrity.NegInt" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/60 Testing: Invalidate.Empty
+30/60 Test: Invalidate.Empty
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Invalidate.Empty" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Invalidate.Empty" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Invalidate.Empty
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Invalidate
+[ RUN      ] Invalidate.Empty
+[       OK ] Invalidate.Empty (0 ms)
+[----------] 1 test from Invalidate (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Invalidate.Empty" end time: Jun 19 15:03 SE Asia Standard Time
+"Invalidate.Empty" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/60 Testing: Invalidate.InvalidChar
+31/60 Test: Invalidate.InvalidChar
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Invalidate.InvalidChar" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Invalidate.InvalidChar" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Invalidate.InvalidChar
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Invalidate
+[ RUN      ] Invalidate.InvalidChar
+[       OK ] Invalidate.InvalidChar (0 ms)
+[----------] 1 test from Invalidate (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Invalidate.InvalidChar" end time: Jun 19 15:03 SE Asia Standard Time
+"Invalidate.InvalidChar" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/60 Testing: Subtract.Pos
+32/60 Test: Subtract.Pos
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Subtract.Pos" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Subtract.Pos" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Subtract.Pos
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Subtract
+[ RUN      ] Subtract.Pos
+[       OK ] Subtract.Pos (0 ms)
+[----------] 1 test from Subtract (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Subtract.Pos" end time: Jun 19 15:03 SE Asia Standard Time
+"Subtract.Pos" time elapsed: 00:00:00
+----------------------------------------------------------
+
+33/60 Testing: Subtract.Neg
+33/60 Test: Subtract.Neg
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Subtract.Neg" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Subtract.Neg" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Subtract.Neg
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Subtract
+[ RUN      ] Subtract.Neg
+[       OK ] Subtract.Neg (0 ms)
+[----------] 1 test from Subtract (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Subtract.Neg" end time: Jun 19 15:03 SE Asia Standard Time
+"Subtract.Neg" time elapsed: 00:00:00
+----------------------------------------------------------
+
+34/60 Testing: Subtract.PosNeg
+34/60 Test: Subtract.PosNeg
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Subtract.PosNeg" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Subtract.PosNeg" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Subtract.PosNeg
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Subtract
+[ RUN      ] Subtract.PosNeg
+[       OK ] Subtract.PosNeg (0 ms)
+[----------] 1 test from Subtract (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Subtract.PosNeg" end time: Jun 19 15:03 SE Asia Standard Time
+"Subtract.PosNeg" time elapsed: 00:00:00
+----------------------------------------------------------
+
+35/60 Testing: Subtract.NegPos
+35/60 Test: Subtract.NegPos
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Subtract.NegPos" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Subtract.NegPos" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Subtract.NegPos
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Subtract
+[ RUN      ] Subtract.NegPos
+[       OK ] Subtract.NegPos (0 ms)
+[----------] 1 test from Subtract (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Subtract.NegPos" end time: Jun 19 15:03 SE Asia Standard Time
+"Subtract.NegPos" time elapsed: 00:00:00
+----------------------------------------------------------
+
+36/60 Testing: Subtract.Zero
+36/60 Test: Subtract.Zero
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Subtract.Zero" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Subtract.Zero" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Subtract.Zero
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Subtract
+[ RUN      ] Subtract.Zero
+[       OK ] Subtract.Zero (0 ms)
+[----------] 1 test from Subtract (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Subtract.Zero" end time: Jun 19 15:03 SE Asia Standard Time
+"Subtract.Zero" time elapsed: 00:00:00
+----------------------------------------------------------
+
+37/60 Testing: Subtract.Large
+37/60 Test: Subtract.Large
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Subtract.Large" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Subtract.Large" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Subtract.Large
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Subtract
+[ RUN      ] Subtract.Large
+[       OK ] Subtract.Large (0 ms)
+[----------] 1 test from Subtract (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Subtract.Large" end time: Jun 19 15:03 SE Asia Standard Time
+"Subtract.Large" time elapsed: 00:00:00
+----------------------------------------------------------
+
+38/60 Testing: Multiply.Pos
+38/60 Test: Multiply.Pos
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Multiply.Pos" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Multiply.Pos" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Multiply.Pos
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Multiply
+[ RUN      ] Multiply.Pos
+[       OK ] Multiply.Pos (0 ms)
+[----------] 1 test from Multiply (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Multiply.Pos" end time: Jun 19 15:03 SE Asia Standard Time
+"Multiply.Pos" time elapsed: 00:00:00
+----------------------------------------------------------
+
+39/60 Testing: Multiply.Neg
+39/60 Test: Multiply.Neg
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Multiply.Neg" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Multiply.Neg" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Multiply.Neg
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Multiply
+[ RUN      ] Multiply.Neg
+[       OK ] Multiply.Neg (0 ms)
+[----------] 1 test from Multiply (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Multiply.Neg" end time: Jun 19 15:03 SE Asia Standard Time
+"Multiply.Neg" time elapsed: 00:00:00
+----------------------------------------------------------
+
+40/60 Testing: Multiply.PosNeg
+40/60 Test: Multiply.PosNeg
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Multiply.PosNeg" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Multiply.PosNeg" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Multiply.PosNeg
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Multiply
+[ RUN      ] Multiply.PosNeg
+[       OK ] Multiply.PosNeg (0 ms)
+[----------] 1 test from Multiply (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Multiply.PosNeg" end time: Jun 19 15:03 SE Asia Standard Time
+"Multiply.PosNeg" time elapsed: 00:00:00
+----------------------------------------------------------
+
+41/60 Testing: Multiply.Zero
+41/60 Test: Multiply.Zero
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Multiply.Zero" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Multiply.Zero" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Multiply.Zero
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Multiply
+[ RUN      ] Multiply.Zero
+[       OK ] Multiply.Zero (0 ms)
+[----------] 1 test from Multiply (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Multiply.Zero" end time: Jun 19 15:03 SE Asia Standard Time
+"Multiply.Zero" time elapsed: 00:00:00
+----------------------------------------------------------
+
+42/60 Testing: Multiply.One
+42/60 Test: Multiply.One
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Multiply.One" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Multiply.One" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Multiply.One
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Multiply
+[ RUN      ] Multiply.One
+[       OK ] Multiply.One (0 ms)
+[----------] 1 test from Multiply (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Multiply.One" end time: Jun 19 15:03 SE Asia Standard Time
+"Multiply.One" time elapsed: 00:00:00
+----------------------------------------------------------
+
+43/60 Testing: Multiply.LargeNumber
+43/60 Test: Multiply.LargeNumber
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Multiply.LargeNumber" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Multiply.LargeNumber" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Multiply.LargeNumber
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Multiply
+[ RUN      ] Multiply.LargeNumber
+[       OK ] Multiply.LargeNumber (25 ms)
+[----------] 1 test from Multiply (25 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (25 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"Multiply.LargeNumber" end time: Jun 19 15:03 SE Asia Standard Time
+"Multiply.LargeNumber" time elapsed: 00:00:00
+----------------------------------------------------------
+
+44/60 Testing: Divide.Zero
+44/60 Test: Divide.Zero
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Divide.Zero" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Divide.Zero" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Divide.Zero
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Divide
+[ RUN      ] Divide.Zero
+[       OK ] Divide.Zero (0 ms)
+[----------] 1 test from Divide (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Divide.Zero" end time: Jun 19 15:03 SE Asia Standard Time
+"Divide.Zero" time elapsed: 00:00:00
+----------------------------------------------------------
+
+45/60 Testing: Divide.One
+45/60 Test: Divide.One
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Divide.One" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Divide.One" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Divide.One
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Divide
+[ RUN      ] Divide.One
+[       OK ] Divide.One (0 ms)
+[----------] 1 test from Divide (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Divide.One" end time: Jun 19 15:03 SE Asia Standard Time
+"Divide.One" time elapsed: 00:00:00
+----------------------------------------------------------
+
+46/60 Testing: Divide.NegativeOne
+46/60 Test: Divide.NegativeOne
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Divide.NegativeOne" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Divide.NegativeOne" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Divide.NegativeOne
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Divide
+[ RUN      ] Divide.NegativeOne
+[       OK ] Divide.NegativeOne (0 ms)
+[----------] 1 test from Divide (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Divide.NegativeOne" end time: Jun 19 15:03 SE Asia Standard Time
+"Divide.NegativeOne" time elapsed: 00:00:00
+----------------------------------------------------------
+
+47/60 Testing: Divide.Equal
+47/60 Test: Divide.Equal
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Divide.Equal" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Divide.Equal" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Divide.Equal
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Divide
+[ RUN      ] Divide.Equal
+[       OK ] Divide.Equal (0 ms)
+[----------] 1 test from Divide (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Divide.Equal" end time: Jun 19 15:03 SE Asia Standard Time
+"Divide.Equal" time elapsed: 00:00:00
+----------------------------------------------------------
+
+48/60 Testing: Divide.Greater
+48/60 Test: Divide.Greater
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Divide.Greater" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Divide.Greater" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Divide.Greater
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Divide
+[ RUN      ] Divide.Greater
+[       OK ] Divide.Greater (0 ms)
+[----------] 1 test from Divide (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Divide.Greater" end time: Jun 19 15:03 SE Asia Standard Time
+"Divide.Greater" time elapsed: 00:00:00
+----------------------------------------------------------
+
+49/60 Testing: Divide.Small
+49/60 Test: Divide.Small
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Divide.Small" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Divide.Small" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Divide.Small
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Divide
+[ RUN      ] Divide.Small
+[       OK ] Divide.Small (0 ms)
+[----------] 1 test from Divide (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Divide.Small" end time: Jun 19 15:03 SE Asia Standard Time
+"Divide.Small" time elapsed: 00:00:00
+----------------------------------------------------------
+
+50/60 Testing: Divide.Negative
+50/60 Test: Divide.Negative
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Divide.Negative" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Divide.Negative" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Divide.Negative
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Divide
+[ RUN      ] Divide.Negative
+[       OK ] Divide.Negative (0 ms)
+[----------] 1 test from Divide (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Divide.Negative" end time: Jun 19 15:03 SE Asia Standard Time
+"Divide.Negative" time elapsed: 00:00:00
+----------------------------------------------------------
+
+51/60 Testing: Divide.Large
+51/60 Test: Divide.Large
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Divide.Large" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Divide.Large" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Divide.Large
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Divide
+[ RUN      ] Divide.Large
+[       OK ] Divide.Large (2362 ms)
+[----------] 1 test from Divide (2362 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2362 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   2.37 sec
+----------------------------------------------------------
+Test Passed.
+"Divide.Large" end time: Jun 19 15:03 SE Asia Standard Time
+"Divide.Large" time elapsed: 00:00:02
+----------------------------------------------------------
+
+52/60 Testing: Divide.Extreme
+52/60 Test: Divide.Extreme
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Divide.Extreme" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Divide.Extreme" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Divide.Extreme
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Divide
+[ RUN      ] Divide.Extreme
+[       OK ] Divide.Extreme (4206 ms)
+[----------] 1 test from Divide (4206 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (4206 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   4.22 sec
+----------------------------------------------------------
+Test Passed.
+"Divide.Extreme" end time: Jun 19 15:03 SE Asia Standard Time
+"Divide.Extreme" time elapsed: 00:00:04
+----------------------------------------------------------
+
+53/60 Testing: Add.Zero
+53/60 Test: Add.Zero
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Add.Zero" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Add.Zero" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Add.Zero
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Add
+[ RUN      ] Add.Zero
+[       OK ] Add.Zero (0 ms)
+[----------] 1 test from Add (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Add.Zero" end time: Jun 19 15:03 SE Asia Standard Time
+"Add.Zero" time elapsed: 00:00:00
+----------------------------------------------------------
+
+54/60 Testing: Add.SmallPos
+54/60 Test: Add.SmallPos
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Add.SmallPos" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Add.SmallPos" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Add.SmallPos
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Add
+[ RUN      ] Add.SmallPos
+[       OK ] Add.SmallPos (0 ms)
+[----------] 1 test from Add (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Add.SmallPos" end time: Jun 19 15:03 SE Asia Standard Time
+"Add.SmallPos" time elapsed: 00:00:00
+----------------------------------------------------------
+
+55/60 Testing: Add.SmallNeg
+55/60 Test: Add.SmallNeg
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Add.SmallNeg" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Add.SmallNeg" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Add.SmallNeg
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Add
+[ RUN      ] Add.SmallNeg
+[       OK ] Add.SmallNeg (0 ms)
+[----------] 1 test from Add (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Add.SmallNeg" end time: Jun 19 15:03 SE Asia Standard Time
+"Add.SmallNeg" time elapsed: 00:00:00
+----------------------------------------------------------
+
+56/60 Testing: Add.SmallPosNeg
+56/60 Test: Add.SmallPosNeg
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Add.SmallPosNeg" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Add.SmallPosNeg" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Add.SmallPosNeg
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Add
+[ RUN      ] Add.SmallPosNeg
+[       OK ] Add.SmallPosNeg (0 ms)
+[----------] 1 test from Add (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Add.SmallPosNeg" end time: Jun 19 15:03 SE Asia Standard Time
+"Add.SmallPosNeg" time elapsed: 00:00:00
+----------------------------------------------------------
+
+57/60 Testing: Add.MedPos
+57/60 Test: Add.MedPos
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Add.MedPos" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Add.MedPos" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Add.MedPos
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Add
+[ RUN      ] Add.MedPos
+[       OK ] Add.MedPos (0 ms)
+[----------] 1 test from Add (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Add.MedPos" end time: Jun 19 15:03 SE Asia Standard Time
+"Add.MedPos" time elapsed: 00:00:00
+----------------------------------------------------------
+
+58/60 Testing: Add.MedNeg
+58/60 Test: Add.MedNeg
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Add.MedNeg" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Add.MedNeg" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Add.MedNeg
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Add
+[ RUN      ] Add.MedNeg
+[       OK ] Add.MedNeg (0 ms)
+[----------] 1 test from Add (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Add.MedNeg" end time: Jun 19 15:03 SE Asia Standard Time
+"Add.MedNeg" time elapsed: 00:00:00
+----------------------------------------------------------
+
+59/60 Testing: Add.MedPosNeg
+59/60 Test: Add.MedPosNeg
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Add.MedPosNeg" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Add.MedPosNeg" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Add.MedPosNeg
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Add
+[ RUN      ] Add.MedPosNeg
+[       OK ] Add.MedPosNeg (0 ms)
+[----------] 1 test from Add (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Add.MedPosNeg" end time: Jun 19 15:03 SE Asia Standard Time
+"Add.MedPosNeg" time elapsed: 00:00:00
+----------------------------------------------------------
+
+60/60 Testing: Add.LargePos
+60/60 Test: Add.LargePos
+Command: "D:/Repos/BigInt-Implement/build/test_bigInt.exe" "--gtest_filter=Add.LargePos" "--gtest_also_run_disabled_tests"
+Directory: D:/Repos/BigInt-Implement/build
+"Add.LargePos" start time: Jun 19 15:03 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Running main() from D:/Repos/BigInt-Implement/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Add.LargePos
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Add
+[ RUN      ] Add.LargePos
+[       OK ] Add.LargePos (0 ms)
+[----------] 1 test from Add (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Add.LargePos" end time: Jun 19 15:03 SE Asia Standard Time
+"Add.LargePos" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 19 15:03 SE Asia Standard Time

@@ -43,7 +43,8 @@ BigInt::BigInt(const std::deque<digit> &digits, bool isNegative)
 // String to BigInt
 BigInt::BigInt(const std::string &str) {
   if (str.empty()) {
-    throw std::invalid_argument("Your input is empty. Please enter a number.");
+    throw std::invalid_argument("Invalid input. Now set to default value 0. "
+                                "Please re-check your input.");
   } else {
     // Binding the sign and setting the start index to read the digits
     int start = 0;
@@ -60,11 +61,10 @@ BigInt::BigInt(const std::string &str) {
     // Check if the input contains non-digit characters. If so, throw an error.
     for (int i = start; i < str_len; ++i) {
       if (str[i] < '0' || str[i] > '9') {
-        std::string error = "Your input contains non-digit characters " +
-                            str.substr(i, 1) + " with ASCII value " +
-                            std::to_string(str[i]) +
-                            ". Please enter a valid number.";
-        throw std::invalid_argument(error);
+        throw std::invalid_argument(
+            "Your BigInt number contains non-digit characters " +
+            str.substr(i, 1) + " with ASCII value " + std::to_string(str[i]) +
+            ". Now set to default value 0. Please re-check your input.");
       }
       if (i != start || str[i] != '0' || str_len == 1) {
         digits.push_back(digit(str[i] - '0'));

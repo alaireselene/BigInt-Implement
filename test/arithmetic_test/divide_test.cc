@@ -78,3 +78,9 @@ TEST(Divide, Large) {
             "-68764177475464657966535744368168263888733343841668822435868514898"
             "25592166276262668846347983594165");
 }
+
+TEST(Divide, Extreme) {
+  BigInt a(randomize(1500));
+  BigInt b(randomize(750));
+  EXPECT_NO_THROW(a / b);
+}

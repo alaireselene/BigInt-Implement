@@ -99,6 +99,9 @@ public:
   BigInt &operator/=(const std::string &other);
   BigInt &operator%=(const std::string &other);
 
+  // BigInt length
+  int length() const;
+
   // Conversion Functions
   std::string toString() const;
 

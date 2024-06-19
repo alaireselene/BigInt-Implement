@@ -38,4 +38,5 @@
 build/
 .cache/
 
-testcase/
+testcases/
+*.inp
